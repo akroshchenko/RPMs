@@ -13,16 +13,16 @@ Source11:         murano-agent.logrotate
 
 BuildArch:        noarch
 
-# delete after test
-BuildRequires:  gettext
-BuildRequires:  python-beautifulsoup4
-BuildRequires:  python-mock
-BuildRequires:  python-mox3
+# # delete after test
+# BuildRequires:  gettext
+# BuildRequires:  python-beautifulsoup4
+# BuildRequires:  python-mock
+# BuildRequires:  python-mox3
 
 
 BuildRequires:    python-devel
 BuildRequires:    python-pbr >= 1.6
-BuildRequires:    python-nose
+# BuildRequires:    python-nose
 BuildRequires:    python-setuptools
 BuildRequires:    python-sphinx >= 1.1.2
 BuildRequires:    python-oslo-config >= 2:3.14.0
