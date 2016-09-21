@@ -13,13 +13,23 @@ Source11:         murano-agent.logrotate
 
 BuildArch:        noarch
 
+# delete after test
+BuildRequires:  gettext
+BuildRequires:  python-beautifulsoup4
+BuildRequires:  python-mock
+BuildRequires:  python-mox3
+
+
+BuildRequires:    python-devel
 BuildRequires:    python-pbr >= 1.6
+BuildRequires:    python-nose
 BuildRequires:    python-setuptools
 BuildRequires:    python-sphinx >= 1.1.2
 BuildRequires:    python-oslo-config >= 2:3.14.0
 BuildRequires:    python-oslo-log >= 1.14.0
 BuildRequires:    python-oslo-service >= 1.10.0
 BuildRequires:    python-oslo-utils >= 3.16.0
+BuildRequires:    systemd-units
 
 Requires:         python-pbr >= 1.6
 Requires:         python-six >= 1.9.0
@@ -56,10 +66,13 @@ rm -rf {test-,}requirements.txt tools/{pip,test}-requires
 PYTHONPATH=. oslo-config-generator --config-file etc/oslo-config-generator/muranoagent.conf
 
 # generate html docs
-export OSLO_PACKAGE_VERSION=%{upstream_version}
-%{__python2} setup.py build_sphinx
+# ls -R
+# $(pwd)
+# export OSLO_PACKAGE_VERSION=%{upstream_version}
+# %{__python2} setup.py --verbose build_sphinx --verbose
 # remove the sphinx-build leftovers
-rm -rf doc/build/html/.{doctrees,buildinfo}
+# rm -rf doc/build/html/.{doctrees,buildinfo}
+# $(pwd)
 
 %install
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
