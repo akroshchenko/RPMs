@@ -17,7 +17,6 @@ BuildArch:        noarch
 BuildRequires:    python-devel
 BuildRequires:    python-pbr >= 1.6
 BuildRequires:    python-setuptools
-# BuildRequires:    python-nose
 BuildRequires:    python-sphinx >= 1.2.1
 BuildRequires:    python-oslo-config >= 2:3.14.0
 BuildRequires:    python-oslo-log >= 3.11.0
@@ -72,12 +71,14 @@ rm -rf {test-,}requirements.txt tools/{pip,test}-requires
 
 %build
 %py2_build
+
 # Generate configuration files
 PYTHONPATH=. oslo-config-generator --config-file etc/oslo-config-generator/muranoagent.conf
 
 # generate html docs
 export OSLO_PACKAGE_VERSION=%{upstream_version}
 %{__python2} setup.py build_sphinx
+
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 
