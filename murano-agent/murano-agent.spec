@@ -3,7 +3,7 @@
 
 Name:             murano-agent
 Version:          3.0.0
-Release:          0.1.rc1%{?dist}
+Release:          0.1%{?milestone}%{?dist}
 Summary:          VM-side guest agent that accepts commands from Murano engine and executes them.
 License:          ASL 2.0
 URL:              http://git.openstack.org/cgit/openstack/%{name}
