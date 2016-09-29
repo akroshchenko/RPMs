@@ -1,4 +1,4 @@
-%global milestone .0r2
+%global milestone .0rc2
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:             murano-agent
