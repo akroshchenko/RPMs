@@ -8,8 +8,8 @@ Summary:          VM-side guest agent that accepts commands from Murano engine a
 License:          ASL 2.0
 URL:              http://git.openstack.org/cgit/openstack/%{name}
 Source0:          https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
-Source10:         murano-agent.service
-Source11:         murano-agent.logrotate
+Source1:          murano-agent.service
+Source2:          murano-agent.logrotate
 
 BuildArch:        noarch
 
@@ -90,10 +90,10 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 install -p -D -m 644 etc/muranoagent/muranoagent.conf.sample %{buildroot}%{_sysconfdir}/murano-agent/muranoagent.conf
 
 # Install initscript for services
-install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/murano-agent.service
+install -p -D -m 644 %{Source1} %{buildroot}%{_unitdir}/murano-agent.service
 
 # Install logrotate
-install -p -D -m 644 %{SOURCE11} %{buildroot}%{_sysconfdir}/logrotate.d/murano-agent
+install -p -D -m 644 %{Source2} %{buildroot}%{_sysconfdir}/logrotate.d/murano-agent
 
 # Install log directory
 install -d -m 755 %{buildroot}%{_localstatedir}/log/murano-agent
