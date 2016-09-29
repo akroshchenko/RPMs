@@ -120,6 +120,7 @@ export PYTHONPATH="%{python2_sitearch}:%{python2_sitelib}:%{buildroot}%{python2_
 %files
 %license LICENSE
 %doc README.rst
+%doc doc/build/html
 %defattr(-,root,root)
 %config(noreplace) %{_sysconfdir}/logrotate.d/murano-agent
 %config(noreplace) %{_sysconfdir}/murano-agent/muranoagent.conf
