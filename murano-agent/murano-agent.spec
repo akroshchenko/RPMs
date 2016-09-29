@@ -1,5 +1,5 @@
 %global milestone 0rc1
-%{!?upstream_version: %global upstream_version %{version}.%{?milestone}}
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:             murano-agent
 Version:          3.0.0
