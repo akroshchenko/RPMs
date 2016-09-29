@@ -84,7 +84,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %install
-%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
+%py2_install
 
 # Install conf file
 install -p -D -m 644 etc/muranoagent/muranoagent.conf.sample %{buildroot}%{_sysconfdir}/murano-agent/muranoagent.conf
