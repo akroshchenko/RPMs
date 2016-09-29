@@ -1,9 +1,0 @@
-2016-09-29 13:00:52,422 - Mock Version: 1.2.20
-2016-09-29 13:00:54,135 - Finish: chroot init
-2016-09-29 13:00:54,137 - Start: build phase for murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm
-2016-09-29 13:00:54,140 - Start: build setup for murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm
-2016-09-29 13:02:35,861 - Finish: build setup for murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm
-2016-09-29 13:02:35,861 - Start: rpmbuild murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm
-2016-09-29 13:02:41,543 - Finish: rpmbuild murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm
-2016-09-29 13:02:41,545 - Finish: build phase for murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm
-2016-09-29 13:02:41,546 - Finish: run
