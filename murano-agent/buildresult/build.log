@@ -1,0 +1,345 @@
+Mock Version: 1.2.20
+ENTER ['do'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'], chrootPath='/var/lib/mock/centos-7-x86_64/root'shell=FalseprintOutput=Falseenv={'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '}gid=135user='mockbuild'timeout=0logger=<mockbuild.trace_decorator.getLog object at 0x1807250>uid=1000)
+Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG: Unsharing. Flags: 134217728
+sh: /usr/bin/python2: No such file or directory
+sh: /usr/bin/python2: No such file or directory
+sh: /usr/bin/python2: No such file or directory
+sh: /usr/bin/python2: No such file or directory
+sh: /usr/bin/python2: No such file or directory
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /builddir/build/SRPMS/murano-agent-3.0.0-0.1.0rc2.el7.src.rpm
+Child return code was: 0
+ENTER ['do'](['bash', '--login', '-c', u'/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'], chrootPath='/var/lib/mock/centos-7-x86_64/root'shell=Falseuid=1000env={'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '}gid=135user='mockbuild'timeout=0private_network=Truelogger=<mockbuild.trace_decorator.getLog object at 0x1807250>printOutput=False)
+Executing command: ['bash', '--login', '-c', u'/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG: Unsharing. Flags: 134217728
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.YsGtJh
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf murano-agent-3.0.0.0rc2
++ /usr/bin/gzip -dc /builddir/build/SOURCES/murano-agent-3.0.0.0rc2.tar.gz
++ /usr/bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd murano-agent-3.0.0.0rc2
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ rm -rf test-requirements.txt requirements.txt tools/pip-requires tools/test-requires
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.ntoaij
++ umask 022
++ cd /builddir/build/BUILD
++ cd murano-agent-3.0.0.0rc2
++ CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic'
++ /usr/bin/python2 setup.py build '--executable=/usr/bin/python2 -s'
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/muranoagent
+creating build/lib/muranoagent/common
+creating build/lib/muranoagent/common/messaging
+copying muranoagent/common/messaging/mqclient.py -> build/lib/muranoagent/common/messaging
+copying muranoagent/common/messaging/message.py -> build/lib/muranoagent/common/messaging
+copying muranoagent/common/messaging/subscription.py -> build/lib/muranoagent/common/messaging
+copying muranoagent/common/messaging/__init__.py -> build/lib/muranoagent/common/messaging
+creating build/lib/muranoagent/executors
+creating build/lib/muranoagent/executors/application
+copying muranoagent/executors/application/__init__.py -> build/lib/muranoagent/executors/application
+copying muranoagent/executors/chef_puppet_executor_base.py -> build/lib/muranoagent/executors
+copying muranoagent/executors/__init__.py -> build/lib/muranoagent/executors
+creating build/lib/muranoagent/executors/puppet
+copying muranoagent/executors/puppet/__init__.py -> build/lib/muranoagent/executors/puppet
+copying muranoagent/common/__init__.py -> build/lib/muranoagent/common
+copying muranoagent/common/config.py -> build/lib/muranoagent/common
+copying muranoagent/execution_plan_runner.py -> build/lib/muranoagent
+copying muranoagent/exceptions.py -> build/lib/muranoagent
+copying muranoagent/opts.py -> build/lib/muranoagent
+copying muranoagent/execution_result.py -> build/lib/muranoagent
+copying muranoagent/app.py -> build/lib/muranoagent
+copying muranoagent/version.py -> build/lib/muranoagent
+copying muranoagent/bunch.py -> build/lib/muranoagent
+copying muranoagent/__init__.py -> build/lib/muranoagent
+copying muranoagent/execution_plan_queue.py -> build/lib/muranoagent
+copying muranoagent/win32.py -> build/lib/muranoagent
+copying muranoagent/files_manager.py -> build/lib/muranoagent
+copying muranoagent/script_runner.py -> build/lib/muranoagent
+creating build/lib/muranoagent/cmd
+copying muranoagent/cmd/run.py -> build/lib/muranoagent/cmd
+copying muranoagent/cmd/__init__.py -> build/lib/muranoagent/cmd
+creating build/lib/muranoagent/tests
+copying muranoagent/tests/__init__.py -> build/lib/muranoagent/tests
+creating build/lib/muranoagent/tests/unit
+copying muranoagent/tests/unit/test_script_runner.py -> build/lib/muranoagent/tests/unit
+copying muranoagent/tests/unit/test_files_manager.py -> build/lib/muranoagent/tests/unit
+copying muranoagent/tests/unit/test_app.py -> build/lib/muranoagent/tests/unit
+copying muranoagent/tests/unit/__init__.py -> build/lib/muranoagent/tests/unit
+copying muranoagent/tests/unit/base.py -> build/lib/muranoagent/tests/unit
+copying muranoagent/tests/unit/execution_plan.py -> build/lib/muranoagent/tests/unit
+copying muranoagent/tests/unit/test_agent.py -> build/lib/muranoagent/tests/unit
+creating build/lib/muranoagent/executors/chef
+copying muranoagent/executors/chef/__init__.py -> build/lib/muranoagent/executors/chef
+creating build/lib/muranoagent/tests/unit/executors
+copying muranoagent/tests/unit/executors/test_chef.py -> build/lib/muranoagent/tests/unit/executors
+copying muranoagent/tests/unit/executors/__init__.py -> build/lib/muranoagent/tests/unit/executors
+copying muranoagent/tests/unit/executors/test_puppet.py -> build/lib/muranoagent/tests/unit/executors
+running egg_info
+deleting murano_agent.egg-info/requires.txt
+writing murano_agent.egg-info/PKG-INFO
+writing top-level names to murano_agent.egg-info/top_level.txt
+writing dependency_links to murano_agent.egg-info/dependency_links.txt
+writing entry points to murano_agent.egg-info/entry_points.txt
+[pbr] Reusing existing SOURCES.txt
++ sleep 1
++ PYTHONPATH=.
++ oslo-config-generator --config-file etc/oslo-config-generator/muranoagent.conf
+WARNING:stevedore.named:Could not load oslo.log, muranoagent, oslo.service.service
++ export OSLO_PACKAGE_VERSION=3.0.0.0rc2
++ OSLO_PACKAGE_VERSION=3.0.0.0rc2
++ /usr/bin/python2 setup.py build_sphinx
+running build_sphinx
+creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build
+creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build/doctrees
+creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build/html
+[pbr] Generating AUTHORS
+[pbr] AUTHORS complete (0.0s)
+Running Sphinx v1.2.3
+fatal: Not a git repository (or any of the parent directories): .git
+loading pickled environment... not yet created
+building [html]: all source files
+updating environment: 1 added, 0 changed, 0 removed
+reading sources... [100%] index
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+writing output... [100%] index
+writing additional files... genindex search
+copying static files... done
+copying extra files... done
+dumping search index... done
+dumping object inventory... done
+build succeeded.
+creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build/man
+Running Sphinx v1.2.3
+fatal: Not a git repository (or any of the parent directories): .git
+loading pickled environment... done
+building [man]: all source files
+updating environment: 0 added, 0 changed, 0 removed
+looking for now-outdated files... none found
+writing... murano-agent.1 { } 
+build succeeded.
++ rm -rf doc/build/html/.doctrees doc/build/html/.buildinfo
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.c2wVrt
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64 '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+++ dirname /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
++ cd murano-agent-3.0.0.0rc2
++ CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic'
++ /usr/bin/python2 setup.py install -O1 --skip-build --root /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+running install
+[pbr] Generating AUTHORS
+[pbr] AUTHORS complete (0.0s)
+running install_lib
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/execution_plan_runner.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/exceptions.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/opts.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/execution_result.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/app.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common
+copying build/lib/muranoagent/common/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+copying build/lib/muranoagent/common/messaging/mqclient.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+copying build/lib/muranoagent/common/messaging/message.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+copying build/lib/muranoagent/common/messaging/subscription.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+copying build/lib/muranoagent/common/messaging/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+copying build/lib/muranoagent/common/config.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common
+copying build/lib/muranoagent/version.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/bunch.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/application
+copying build/lib/muranoagent/executors/application/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/application
+copying build/lib/muranoagent/executors/chef_puppet_executor_base.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef
+copying build/lib/muranoagent/executors/chef/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/puppet
+copying build/lib/muranoagent/executors/puppet/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/puppet
+copying build/lib/muranoagent/executors/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd
+copying build/lib/muranoagent/cmd/run.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd
+copying build/lib/muranoagent/cmd/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd
+copying build/lib/muranoagent/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/execution_plan_queue.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/win32.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+copying build/lib/muranoagent/files_manager.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+copying build/lib/muranoagent/tests/unit/test_script_runner.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+copying build/lib/muranoagent/tests/unit/test_files_manager.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+copying build/lib/muranoagent/tests/unit/test_app.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+copying build/lib/muranoagent/tests/unit/executors/test_chef.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+copying build/lib/muranoagent/tests/unit/executors/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+copying build/lib/muranoagent/tests/unit/executors/test_puppet.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+copying build/lib/muranoagent/tests/unit/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+copying build/lib/muranoagent/tests/unit/base.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+copying build/lib/muranoagent/tests/unit/execution_plan.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+copying build/lib/muranoagent/tests/unit/test_agent.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+copying build/lib/muranoagent/tests/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests
+copying build/lib/muranoagent/script_runner.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/execution_plan_runner.py to execution_plan_runner.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/exceptions.py to exceptions.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/opts.py to opts.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/execution_result.py to execution_result.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/app.py to app.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/mqclient.py to mqclient.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/message.py to message.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/subscription.py to subscription.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/config.py to config.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/version.py to version.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/bunch.py to bunch.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/application/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef_puppet_executor_base.py to chef_puppet_executor_base.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/puppet/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd/run.py to run.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/execution_plan_queue.py to execution_plan_queue.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/win32.py to win32.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/files_manager.py to files_manager.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_script_runner.py to test_script_runner.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_files_manager.py to test_files_manager.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_app.py to test_app.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors/test_chef.py to test_chef.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors/test_puppet.py to test_puppet.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/base.py to base.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/execution_plan.py to execution_plan.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_agent.py to test_agent.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/script_runner.py to script_runner.pyc
+writing byte-compilation script '/tmp/tmp1cZObA.py'
+/usr/bin/python2 -O /tmp/tmp1cZObA.py
+removing /tmp/tmp1cZObA.py
+running install_egg_info
+running egg_info
+writing murano_agent.egg-info/PKG-INFO
+writing top-level names to murano_agent.egg-info/top_level.txt
+writing dependency_links to murano_agent.egg-info/dependency_links.txt
+writing entry points to murano_agent.egg-info/entry_points.txt
+[pbr] Reusing existing SOURCES.txt
+Copying murano_agent.egg-info to /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/murano_agent-3.0.0.0rc2-py2.7.egg-info
+running install_scripts
+Installing muranoagent script to /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/bin
++ install -p -D -m 644 etc/muranoagent/muranoagent.conf.sample /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/etc/murano-agent/muranoagent.conf
++ install -p -D -m 644 /builddir/build/SOURCES/murano-agent.service /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/systemd/system/murano-agent.service
++ install -p -D -m 644 /builddir/build/SOURCES/murano-agent.logrotate /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/etc/logrotate.d/murano-agent
++ install -d -m 755 /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/var/log/murano-agent
++ install -d -m 755 /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/var/lib/murano-agent
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /builddir/build/BUILD/murano-agent-3.0.0.0rc2
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
+find: 'debug': No such file or directory
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
+Bytecompiling .py files below /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7 using /usr/bin/python2.7
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Executing(%check): /bin/sh -e /var/tmp/rpm-tmp.tXpxYF
++ umask 022
++ cd /builddir/build/BUILD
++ cd murano-agent-3.0.0.0rc2
++ export PYTHONPATH=/usr/lib64/python2.7/site-packages:/usr/lib/python2.7/site-packages:/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages
++ PYTHONPATH=/usr/lib64/python2.7/site-packages:/usr/lib/python2.7/site-packages:/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages
++ /usr/bin/python2 setup.py testr --coverage
+running testr
+Coverage.py warning: Module murano-agent was never imported.
+Coverage.py warning: No data was collected.
+Coverage.py warning: Module murano-agent was never imported.
+Coverage.py warning: No data was collected.
+Coverage.py warning: Module murano-agent was never imported.
+Coverage.py warning: No data was collected.
+utf-8
+Coverage.py warning: Module murano-agent was never imported.
+Coverage.py warning: No data was collected.
+Coverage.py warning: Module murano-agent was never imported.
+Coverage.py warning: No data was collected.
+No data to report.
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY --list 
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpFabyR4
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpPEAVfW
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpmWCWDY
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpg4U_s3
+Ran 37 tests in 0.122s
+PASSED (id=0)
++ exit 0
+Processing files: murano-agent-3.0.0-0.1.0rc2.el7.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.VYiiPY
++ umask 022
++ cd /builddir/build/BUILD
++ cd murano-agent-3.0.0.0rc2
++ DOCDIR=/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
++ cp -pr README.rst /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
++ cp -pr doc/build/html /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
++ exit 0
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.45jfHh
++ umask 022
++ cd /builddir/build/BUILD
++ cd murano-agent-3.0.0.0rc2
++ LICENSEDIR=/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/licenses/murano-agent-3.0.0
++ export LICENSEDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/licenses/murano-agent-3.0.0
++ cp -pr LICENSE /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/licenses/murano-agent-3.0.0
++ exit 0
+Provides: config(murano-agent) = 3.0.0-0.1.0rc2.el7 murano-agent = 3.0.0-0.1.0rc2.el7
+Requires(interp): /bin/sh /bin/sh /bin/sh
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PartialHardlinkSets) <= 4.0.4-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(post): /bin/sh systemd
+Requires(preun): /bin/sh systemd
+Requires(postun): /bin/sh systemd
+Requires: /usr/bin/python2 python(abi) = 2.7
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+Wrote: /builddir/build/RPMS/murano-agent-3.0.0-0.1.0rc2.el7.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.Cpk0rY
++ umask 022
++ cd /builddir/build/BUILD
++ cd murano-agent-3.0.0.0rc2
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
++ exit 0
+Child return code was: 0

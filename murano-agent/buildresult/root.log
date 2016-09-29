@@ -1,0 +1,1275 @@
+INFO buildroot.py:318:  Mock Version: 1.2.20
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/dev/pts
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/dev/pts
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/dev/shm
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/dev/shm
+DEBUG buildroot.py:449:  kernel version == 4.4.0-38-generic
+DEBUG util.py:114:  touching file: /var/lib/mock/centos-7-x86_64/root/etc/fstab
+DEBUG util.py:114:  touching file: /var/lib/mock/centos-7-x86_64/root/etc/yum.conf
+DEBUG util.py:114:  touching file: /var/lib/mock/centos-7-x86_64/root/etc/dnf.conf
+DEBUG util.py:114:  touching file: /var/lib/mock/centos-7-x86_64/root/var/log/yum.log
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/centos-7-x86_64/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'sysfs', '/var/lib/mock/centos-7-x86_64/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/centos-7-x86_64/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/centos-7-x86_64/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/centos-7-x86_64/yum_cache/', '/var/lib/mock/centos-7-x86_64/root/var/cache/yum/'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG buildroot.py:136:  rootdir = /var/lib/mock/centos-7-x86_64/root
+DEBUG buildroot.py:137:  resultdir = /home/abuild/buildresult
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/etc/pki/mock
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/etc/yum/pluginconf.d
+DEBUG package_manager.py:199:  configure yum
+DEBUG package_manager.py:205:  configure yum priorities
+DEBUG package_manager.py:207:  configure yum rhnplugin
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/usr/sbin/userdel', '-f', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/usr/sbin/groupdel', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:421:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:557:  Child return code was: 6
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/usr/sbin/groupadd', '-g', '135', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/usr/sbin/useradd', '-o', '-m', '-u', '1000', '-g', '135', '-d', '/builddir', '-n', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:421:  useradd: warning: the home directory already exists.
+DEBUG util.py:421:  Not copying any file from skel directory into it.
+DEBUG util.py:421:  Creating mailbox file: File exists
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/builddir/build/RPMS
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/builddir/build/RPMS
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/builddir/build/SPECS
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/builddir/build/SPECS
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/builddir/build/SRPMS
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/builddir/build/SOURCES
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/builddir/build/BUILD
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/builddir/build/BUILD
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/builddir/build/BUILDROOT
+DEBUG util.py:101:  ensuring that dir exists: /var/lib/mock/centos-7-x86_64/root/builddir/build/originals
+DEBUG util.py:104:  creating dir: /var/lib/mock/centos-7-x86_64/root/builddir/build/originals
+DEBUG util.py:114:  touching file: /var/lib/mock/centos-7-x86_64/root/.initialized
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:421:  Updating / installing...
+DEBUG util.py:421:  murano-agent-3.0.0-0.1.0rc2.el7.centos########################################
+DEBUG util.py:421:  warning: user user does not exist - using root
+DEBUG util.py:421:  warning: group user does not exist - using root
+DEBUG util.py:421:  warning: user user does not exist - using root
+DEBUG util.py:421:  warning: group user does not exist - using root
+DEBUG util.py:421:  warning: user user does not exist - using root
+DEBUG util.py:421:  warning: group user does not exist - using root
+DEBUG util.py:421:  warning: user user does not exist - using root
+DEBUG util.py:421:  warning: group user does not exist - using root
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/rpm', '-qpl', '/builddir/build/originals/murano-agent-3.0.0-0.1.0rc2.el7.centos.src.rpm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:421:  murano-agent-3.0.0.0rc2.tar.gz
+DEBUG util.py:421:  murano-agent.logrotate
+DEBUG util.py:421:  murano-agent.service
+DEBUG util.py:421:  murano-agent.spec
+DEBUG util.py:557:  Child return code was: 0
+INFO buildroot.py:187:  ENTER ['do'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'], chrootPath='/var/lib/mock/centos-7-x86_64/root'shell=FalseprintOutput=Falseenv={'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '}gid=135user='mockbuild'timeout=0logger=<mockbuild.trace_decorator.getLog object at 0x1807250>uid=1000)
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:421:  sh: /usr/bin/python2: No such file or directory
+DEBUG util.py:421:  sh: /usr/bin/python2: No such file or directory
+DEBUG util.py:421:  sh: /usr/bin/python2: No such file or directory
+DEBUG util.py:421:  sh: /usr/bin/python2: No such file or directory
+DEBUG util.py:421:  sh: /usr/bin/python2: No such file or directory
+DEBUG util.py:421:  Building target platforms: x86_64
+DEBUG util.py:421:  Building for target x86_64
+DEBUG util.py:421:  Wrote: /builddir/build/SRPMS/murano-agent-3.0.0-0.1.0rc2.el7.src.rpm
+DEBUG util.py:557:  Child return code was: 0
+DEBUG package_manager.py:96:  ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/centos-7-x86_64/root/', '--releasever', '7', '/var/lib/mock/centos-7-x86_64/root//builddir/build/SRPMS/murano-agent-3.0.0-0.1.0rc2.el7.src.rpm']
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/centos-7-x86_64/root/', '--releasever', '7', '/var/lib/mock/centos-7-x86_64/root//builddir/build/SRPMS/murano-agent-3.0.0-0.1.0rc2.el7.src.rpm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'LC_MESSAGES': 'C', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  Configuration file /var/lib/mock/centos-7-x86_64/root/etc/yum/pluginconf.d/fastestmirror.conf not found
+DEBUG util.py:421:  Unable to find configuration file for plugin fastestmirror
+DEBUG util.py:421:  Configuration file /var/lib/mock/centos-7-x86_64/root/etc/yum/pluginconf.d/ovl.conf not found
+DEBUG util.py:421:  Unable to find configuration file for plugin ovl
+DEBUG util.py:421:  Loaded plugins: priorities
+DEBUG util.py:421:  1276 packages excluded due to repository priority protections
+DEBUG util.py:421:  Getting requirements for murano-agent-3.0.0-0.1.0rc2.el7.src
+DEBUG util.py:421:   --> python-devel-2.7.5-39.el7_2.x86_64
+DEBUG util.py:421:   --> python-pbr-1.8.1-2.el7.noarch
+DEBUG util.py:421:   --> python2-setuptools-22.0.5-1.el7.noarch
+DEBUG util.py:421:   --> python-sphinx-1.2.3-4.el7.noarch
+DEBUG util.py:421:   --> 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.el7.centos.noarch
+DEBUG util.py:421:   --> python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.centos.noarch
+DEBUG util.py:421:   --> python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:   --> python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7.centos.noarch
+DEBUG util.py:421:   --> 1:python-kombu-3.0.32-1.el7.noarch
+DEBUG util.py:421:   --> python-anyjson-0.3.3-3.el7.noarch
+DEBUG util.py:421:   --> python-semantic_version-2.4.2-1.el7.noarch
+DEBUG util.py:421:   --> GitPython-1.0.1-5.el7.noarch
+DEBUG util.py:421:   --> python2-hacking-0.11.1-0.20160928202542.206d40b.el7.centos.noarch
+DEBUG util.py:421:   --> python-unittest2-1.0.1-1.el7.noarch
+DEBUG util.py:421:   --> python-coverage-3.6-0.5.b3.el7.x86_64
+DEBUG util.py:421:   --> python2-mock-2.0.0-1.el7.noarch
+DEBUG util.py:421:   --> python-testtools-1.8.0-2.el7.noarch
+DEBUG util.py:421:   --> python-testrepository-0.0.18-2.el7.noarch
+DEBUG util.py:421:   --> python2-oslo-sphinx-4.7.1-0.20160916002204.0f2d738.el7.centos.noarch
+DEBUG util.py:421:   --> python2-reno-1.8.0-0.20160916122805.50c6ed3.el7.centos.noarch
+DEBUG util.py:421:   --> systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Running transaction check
+DEBUG util.py:421:  ---> Package GitPython.noarch 0:1.0.1-5.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python(abi) = 2.7 for package: GitPython-1.0.1-5.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-gitdb for package: GitPython-1.0.1-5.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: git-core for package: GitPython-1.0.1-5.el7.noarch
+DEBUG util.py:421:  ---> Package python-anyjson.noarch 0:0.3.3-3.el7 will be installed
+DEBUG util.py:421:  ---> Package python-coverage.x86_64 0:3.6-0.5.b3.el7 will be installed
+DEBUG util.py:421:  ---> Package python-devel.x86_64 0:2.7.5-39.el7_2 will be installed
+DEBUG util.py:421:  ---> Package python-kombu.noarch 1:3.0.32-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-amqp >= 1.4.5 for package: 1:python-kombu-3.0.32-1.el7.noarch
+DEBUG util.py:421:  ---> Package python-pbr.noarch 0:1.8.1-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python-semantic_version.noarch 0:2.4.2-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-sphinx.noarch 0:1.2.3-4.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-pygments for package: python-sphinx-1.2.3-4.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-jinja2 for package: python-sphinx-1.2.3-4.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-docutils for package: python-sphinx-1.2.3-4.el7.noarch
+DEBUG util.py:421:  ---> Package python-testrepository.noarch 0:0.0.18-2.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-subunit for package: python-testrepository-0.0.18-2.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-fixtures for package: python-testrepository-0.0.18-2.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-extras for package: python-testrepository-0.0.18-2.el7.noarch
+DEBUG util.py:421:  ---> Package python-testtools.noarch 0:1.8.0-2.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-mimeparse for package: python-testtools-1.8.0-2.el7.noarch
+DEBUG util.py:421:  ---> Package python-unittest2.noarch 0:1.0.1-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-six >= 1.4.0 for package: python-unittest2-1.0.1-1.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-traceback2 for package: python-unittest2-1.0.1-1.el7.noarch
+DEBUG util.py:421:  ---> Package python2-hacking.noarch 0:0.11.1-0.20160928202542.206d40b.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: pyflakes for package: python2-hacking-0.11.1-0.20160928202542.206d40b.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-flake8 for package: python2-hacking-0.11.1-0.20160928202542.206d40b.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-mock.noarch 0:2.0.0-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-funcsigs for package: python2-mock-2.0.0-1.el7.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-config.noarch 2:3.17.0-0.20160920171017.8db0b7c.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-debtcollector >= 1.2.0 for package: 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-netaddr >= 0.7.12 for package: 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-i18n >= 2.1.0 for package: 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-rfc3986 >= 0.2.0 for package: 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-stevedore >= 1.10.0 for package: 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-log.noarch 0:3.16.0-0.20160923102432.573e049.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-log-lang = 3.16.0-0.20160923102432.573e049.el7.centos for package: python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-babel for package: python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-dateutil for package: python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-inotify for package: python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-context for package: python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-serialization for package: python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-service.noarch 0:1.16.0-0.20160907193203.9df6088.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-eventlet >= 0.17.4 for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-monotonic >= 0.3 for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-concurrency >= 2.3.0 for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-paste-deploy >= 1.5.0 for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-greenlet for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-paste for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-routes for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-webob for package: python2-oslo-service-1.16.0-0.20160907193203.9df6088.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-sphinx.noarch 0:4.7.1-0.20160916002204.0f2d738.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-requests >= 2.5.2 for package: python2-oslo-sphinx-4.7.1-0.20160916002204.0f2d738.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-utils.noarch 0:3.16.0-0.20160923101639.e1d503c.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-utils-lang = 3.16.0-0.20160923101639.e1d503c.el7.centos for package: python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-netifaces >= 0.10.4 for package: python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: pyparsing for package: python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-iso8601 for package: python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: pytz for package: python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-reno.noarch 0:1.8.0-0.20160916122805.50c6ed3.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: PyYAML for package: python2-reno-1.8.0-0.20160916122805.50c6ed3.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-setuptools.noarch 0:22.0.5-1.el7 will be installed
+DEBUG util.py:421:  ---> Package systemd.x86_64 0:219-19.el7_2.13 will be installed
+DEBUG util.py:421:  --> Processing Dependency: kmod >= 18-4 for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libkmod.so.2(LIBKMOD_5)(64bit) for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libcryptsetup.so.4(CRYPTSETUP_1.0)(64bit) for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Processing Dependency: dbus for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Processing Dependency: acl for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libqrencode.so.3()(64bit) for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libkmod.so.2()(64bit) for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libcryptsetup.so.4()(64bit) for package: systemd-219-19.el7_2.13.x86_64
+DEBUG util.py:421:  --> Running transaction check
+DEBUG util.py:421:  ---> Package PyYAML.x86_64 0:3.10-11.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: libyaml-0.so.2()(64bit) for package: PyYAML-3.10-11.el7.x86_64
+DEBUG util.py:421:  ---> Package acl.x86_64 0:2.2.51-12.el7 will be installed
+DEBUG util.py:421:  ---> Package cryptsetup-libs.x86_64 0:1.6.7-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: libdevmapper.so.1.02(Base)(64bit) for package: cryptsetup-libs-1.6.7-1.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libdevmapper.so.1.02()(64bit) for package: cryptsetup-libs-1.6.7-1.el7.x86_64
+DEBUG util.py:421:  ---> Package dbus.x86_64 1:1.6.12-14.el7_2 will be installed
+DEBUG util.py:421:  --> Processing Dependency: dbus-libs(x86-64) = 1:1.6.12-14.el7_2 for package: 1:dbus-1.6.12-14.el7_2.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libdbus-1.so.3()(64bit) for package: 1:dbus-1.6.12-14.el7_2.x86_64
+DEBUG util.py:421:  ---> Package git.x86_64 0:1.8.3.1-6.el7_2.1 will be installed
+DEBUG util.py:421:  --> Processing Dependency: perl-Git = 1.8.3.1-6.el7_2.1 for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: rsync for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: perl(Git) for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: perl(Error) for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: openssh-clients for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: less for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libgnome-keyring.so.0()(64bit) for package: git-1.8.3.1-6.el7_2.1.x86_64
+DEBUG util.py:421:  ---> Package kmod.x86_64 0:20-8.el7_2 will be installed
+DEBUG util.py:421:  --> Processing Dependency: dracut for package: kmod-20-8.el7_2.x86_64
+DEBUG util.py:421:  ---> Package kmod-libs.x86_64 0:20-8.el7_2 will be installed
+DEBUG util.py:421:  ---> Package pyflakes.noarch 0:0.9.2-1.el7 will be installed
+DEBUG util.py:421:  ---> Package pyparsing.noarch 0:2.0.3-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python.x86_64 0:2.7.5-39.el7_2 will be installed
+DEBUG util.py:421:  ---> Package python-amqp.noarch 0:1.4.6-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-dateutil.noarch 1:2.4.2-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-docutils.noarch 0:0.11-0.2.20130715svn7687.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-imaging for package: python-docutils-0.11-0.2.20130715svn7687.el7.noarch
+DEBUG util.py:421:  ---> Package python-extras.noarch 0:0.0.3-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python-fixtures.noarch 0:3.0.0-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python-flake8.noarch 0:2.4.1-2.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-pep8 >= 1.5.7 for package: python-flake8-2.4.1-2.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-mccabe >= 0.2 for package: python-flake8-2.4.1-2.el7.noarch
+DEBUG util.py:421:  ---> Package python-gitdb.x86_64 0:0.6.4-4.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-smmap for package: python-gitdb-0.6.4-4.el7.x86_64
+DEBUG util.py:421:  ---> Package python-inotify.noarch 0:0.9.4-4.el7 will be installed
+DEBUG util.py:421:  ---> Package python-jinja2.noarch 0:2.7.2-2.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-markupsafe for package: python-jinja2-2.7.2-2.el7.noarch
+DEBUG util.py:421:  ---> Package python-mimeparse.noarch 0:0.1.4-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-monotonic.noarch 0:0.6-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-netaddr.noarch 0:0.7.18-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-netifaces.x86_64 0:0.10.4-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-oslo-log-lang.noarch 0:3.16.0-0.20160923102432.573e049.el7.centos will be installed
+DEBUG util.py:421:  ---> Package python-oslo-utils-lang.noarch 0:3.16.0-0.20160923101639.e1d503c.el7.centos will be installed
+DEBUG util.py:421:  ---> Package python-paste.noarch 0:1.7.5.1-9.20111221hg1498.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-tempita for package: python-paste-1.7.5.1-9.20111221hg1498.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: pyOpenSSL for package: python-paste-1.7.5.1-9.20111221hg1498.el7.noarch
+DEBUG util.py:421:  ---> Package python-paste-deploy.noarch 0:1.5.2-6.el7 will be installed
+DEBUG util.py:421:  ---> Package python-pygments.noarch 0:2.0.2-4.el7 will be installed
+DEBUG util.py:421:  ---> Package python-requests.noarch 0:2.10.0-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-urllib3 = 1.15.1 for package: python-requests-2.10.0-1.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-chardet for package: python-requests-2.10.0-1.el7.noarch
+DEBUG util.py:421:  ---> Package python-rfc3986.noarch 0:0.2.0-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-routes.noarch 0:1.13-2.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-repoze-lru for package: python-routes-1.13-2.el7.noarch
+DEBUG util.py:421:  ---> Package python-six.noarch 0:1.9.0-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-subunit.noarch 0:1.0.0-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-webob.noarch 0:1.4.1-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-babel.noarch 0:2.3.4-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-debtcollector.noarch 0:1.8.0-0.20160915220215.4e9659a.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-wrapt for package: python2-debtcollector-1.8.0-0.20160915220215.4e9659a.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-eventlet.noarch 0:0.18.4-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-funcsigs.noarch 0:0.4-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-greenlet.x86_64 0:0.4.9-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-iso8601.noarch 0:0.1.11-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-oslo-concurrency.noarch 0:3.14.0-0.20160923102201.ebd3921.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-concurrency-lang = 3.14.0-0.20160923102201.ebd3921.el7.centos for package: python2-oslo-concurrency-3.14.0-0.20160923102201.ebd3921.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-enum34 for package: python2-oslo-concurrency-3.14.0-0.20160923102201.ebd3921.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-fasteners for package: python2-oslo-concurrency-3.14.0-0.20160923102201.ebd3921.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-posix_ipc for package: python2-oslo-concurrency-3.14.0-0.20160923102201.ebd3921.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-retrying for package: python2-oslo-concurrency-3.14.0-0.20160923102201.ebd3921.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-context.noarch 0:2.9.0-0.20160907010300.0ad0950.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-positional for package: python2-oslo-context-2.9.0-0.20160907010300.0ad0950.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-i18n.noarch 0:3.9.0-0.20160922194815.1f8d018.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-oslo-i18n-lang = 3.9.0-0.20160922194815.1f8d018.el7.centos for package: python2-oslo-i18n-3.9.0-0.20160922194815.1f8d018.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-oslo-serialization.noarch 0:2.13.0-0.20160906185312.1f86a66.el7.centos will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-ipaddress for package: python2-oslo-serialization-2.13.0-0.20160906185312.1f86a66.el7.centos.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-msgpack for package: python2-oslo-serialization-2.13.0-0.20160906185312.1f86a66.el7.centos.noarch
+DEBUG util.py:421:  ---> Package python2-stevedore.noarch 0:1.17.1-0.20160906123743.62398ed.el7.centos will be installed
+DEBUG util.py:421:  ---> Package python2-traceback2.noarch 0:1.4.0-7.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-linecache2 for package: python2-traceback2-1.4.0-7.el7.noarch
+DEBUG util.py:421:  ---> Package pytz.noarch 0:2012d-5.el7 will be installed
+DEBUG util.py:421:  ---> Package qrencode-libs.x86_64 0:3.4.1-3.el7 will be installed
+DEBUG util.py:421:  --> Running transaction check
+DEBUG util.py:421:  ---> Package dbus-libs.x86_64 1:1.6.12-14.el7_2 will be installed
+DEBUG util.py:421:  ---> Package device-mapper-libs.x86_64 7:1.02.107-5.el7_2.5 will be installed
+DEBUG util.py:421:  --> Processing Dependency: device-mapper = 7:1.02.107-5.el7_2.5 for package: 7:device-mapper-libs-1.02.107-5.el7_2.5.x86_64
+DEBUG util.py:421:  ---> Package dracut.x86_64 0:033-360.el7_2.1 will be installed
+DEBUG util.py:421:  --> Processing Dependency: procps-ng for package: dracut-033-360.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: kpartx for package: dracut-033-360.el7_2.1.x86_64
+DEBUG util.py:421:  --> Processing Dependency: hardlink for package: dracut-033-360.el7_2.1.x86_64
+DEBUG util.py:421:  ---> Package less.x86_64 0:458-9.el7 will be installed
+DEBUG util.py:421:  ---> Package libgnome-keyring.x86_64 0:3.8.0-3.el7 will be installed
+DEBUG util.py:421:  ---> Package libyaml.x86_64 0:0.1.4-11.el7_0 will be installed
+DEBUG util.py:421:  ---> Package openssh-clients.x86_64 0:6.6.1p1-25.el7_2 will be installed
+DEBUG util.py:421:  --> Processing Dependency: openssh = 6.6.1p1-25.el7_2 for package: openssh-clients-6.6.1p1-25.el7_2.x86_64
+DEBUG util.py:421:  --> Processing Dependency: fipscheck-lib(x86-64) >= 1.3.0 for package: openssh-clients-6.6.1p1-25.el7_2.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libfipscheck.so.1()(64bit) for package: openssh-clients-6.6.1p1-25.el7_2.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libedit.so.0()(64bit) for package: openssh-clients-6.6.1p1-25.el7_2.x86_64
+DEBUG util.py:421:  ---> Package perl-Error.noarch 1:0.17020-2.el7 will be installed
+DEBUG util.py:421:  ---> Package perl-Git.noarch 0:1.8.3.1-6.el7_2.1 will be installed
+DEBUG util.py:421:  ---> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
+DEBUG util.py:421:  ---> Package pyOpenSSL.noarch 0:0.15.1-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-cryptography for package: pyOpenSSL-0.15.1-1.el7.noarch
+DEBUG util.py:421:  ---> Package python-chardet.noarch 0:2.2.1-1.el7_1 will be installed
+DEBUG util.py:421:  ---> Package python-enum34.noarch 0:1.0-4.el7 will be installed
+DEBUG util.py:421:  ---> Package python-ipaddress.noarch 0:1.0.16-3.el7 will be installed
+DEBUG util.py:421:  ---> Package python-linecache2.noarch 0:1.0.0-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-markupsafe.x86_64 0:0.11-10.el7 will be installed
+DEBUG util.py:421:  ---> Package python-mccabe.noarch 0:0.2.1-4.el7 will be installed
+DEBUG util.py:421:  ---> Package python-oslo-concurrency-lang.noarch 0:3.14.0-0.20160923102201.ebd3921.el7.centos will be installed
+DEBUG util.py:421:  ---> Package python-oslo-i18n-lang.noarch 0:3.9.0-0.20160922194815.1f8d018.el7.centos will be installed
+DEBUG util.py:421:  ---> Package python-pep8.noarch 0:1.5.7-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python-pillow.x86_64 0:2.0.0-19.gitd1c6db8.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: libtiff.so.5(LIBTIFF_4.0)(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libwebp.so.4()(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libtiff.so.5()(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libjpeg.so.62()(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: libfreetype.so.6()(64bit) for package: python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64
+DEBUG util.py:421:  ---> Package python-posix_ipc.x86_64 0:0.9.8-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python-repoze-lru.noarch 0:0.4-3.el7 will be installed
+DEBUG util.py:421:  ---> Package python-retrying.noarch 0:1.2.3-4.el7 will be installed
+DEBUG util.py:421:  ---> Package python-smmap.noarch 0:0.9.0-5.el7 will be installed
+DEBUG util.py:421:  ---> Package python-tempita.noarch 0:0.5.1-8.el7 will be installed
+DEBUG util.py:421:  ---> Package python-urllib3.noarch 0:1.15.1-2.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-pysocks for package: python-urllib3-1.15.1-2.el7.noarch
+DEBUG util.py:421:  --> Processing Dependency: python-backports-ssl_match_hostname for package: python-urllib3-1.15.1-2.el7.noarch
+DEBUG util.py:421:  ---> Package python-wrapt.x86_64 0:1.10.8-2.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-fasteners.noarch 0:0.14.1-4.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-msgpack.x86_64 0:0.4.8-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-positional.noarch 0:1.1.1-2.el7 will be installed
+DEBUG util.py:421:  ---> Package rsync.x86_64 0:3.0.9-17.el7 will be installed
+DEBUG util.py:421:  --> Running transaction check
+DEBUG util.py:421:  ---> Package device-mapper.x86_64 7:1.02.107-5.el7_2.5 will be installed
+DEBUG util.py:421:  ---> Package fipscheck-lib.x86_64 0:1.4.1-5.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: /usr/bin/fipscheck for package: fipscheck-lib-1.4.1-5.el7.x86_64
+DEBUG util.py:421:  ---> Package freetype.x86_64 0:2.4.11-11.el7 will be installed
+DEBUG util.py:421:  ---> Package hardlink.x86_64 1:1.0-19.el7 will be installed
+DEBUG util.py:421:  ---> Package kpartx.x86_64 0:0.4.9-85.el7_2.6 will be installed
+DEBUG util.py:421:  ---> Package libedit.x86_64 0:3.0-12.20121213cvs.el7 will be installed
+DEBUG util.py:421:  ---> Package libjpeg-turbo.x86_64 0:1.2.90-5.el7 will be installed
+DEBUG util.py:421:  ---> Package libtiff.x86_64 0:4.0.3-25.el7_2 will be installed
+DEBUG util.py:421:  --> Processing Dependency: libjbig.so.2.0()(64bit) for package: libtiff-4.0.3-25.el7_2.x86_64
+DEBUG util.py:421:  ---> Package libwebp.x86_64 0:0.3.0-3.el7 will be installed
+DEBUG util.py:421:  ---> Package openssh.x86_64 0:6.6.1p1-25.el7_2 will be installed
+DEBUG util.py:421:  ---> Package procps-ng.x86_64 0:3.3.10-5.el7_2 will be installed
+DEBUG util.py:421:  ---> Package python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch
+DEBUG util.py:421:  ---> Package python2-cryptography.x86_64 0:1.2.1-3.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python2-pyasn1 >= 0.1.8 for package: python2-cryptography-1.2.1-3.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: python2-cffi >= 1.4.1 for package: python2-cryptography-1.2.1-3.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: python-idna >= 2.0 for package: python2-cryptography-1.2.1-3.el7.x86_64
+DEBUG util.py:421:  --> Processing Dependency: openssl for package: python2-cryptography-1.2.1-3.el7.x86_64
+DEBUG util.py:421:  ---> Package python2-pysocks.noarch 0:1.5.6-3.el7 will be installed
+DEBUG util.py:421:  --> Running transaction check
+DEBUG util.py:421:  ---> Package fipscheck.x86_64 0:1.4.1-5.el7 will be installed
+DEBUG util.py:421:  ---> Package jbigkit-libs.x86_64 0:2.0-11.el7 will be installed
+DEBUG util.py:421:  ---> Package openssl.x86_64 1:1.0.1e-51.el7_2.7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: openssl-libs(x86-64) = 1:1.0.1e-51.el7_2.7 for package: 1:openssl-1.0.1e-51.el7_2.7.x86_64
+DEBUG util.py:421:  ---> Package python-backports.x86_64 0:1.0-8.el7 will be installed
+DEBUG util.py:421:  ---> Package python-idna.noarch 0:2.0-1.el7 will be installed
+DEBUG util.py:421:  ---> Package python2-cffi.x86_64 0:1.5.2-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-pycparser for package: python2-cffi-1.5.2-1.el7.x86_64
+DEBUG util.py:421:  ---> Package python2-pyasn1.noarch 0:0.1.9-6.el7.1 will be installed
+DEBUG util.py:421:  --> Running transaction check
+DEBUG util.py:421:  ---> Package openssl-libs.x86_64 1:1.0.1e-51.el7_2.5 will be updated
+DEBUG util.py:421:  ---> Package openssl-libs.x86_64 1:1.0.1e-51.el7_2.7 will be an update
+DEBUG util.py:421:  ---> Package python-pycparser.noarch 0:2.10-1.el7 will be installed
+DEBUG util.py:421:  --> Processing Dependency: python-ply for package: python-pycparser-2.10-1.el7.noarch
+DEBUG util.py:421:  --> Running transaction check
+DEBUG util.py:421:  ---> Package python-ply.noarch 0:3.4-4.el7 will be installed
+DEBUG util.py:421:  --> Finished Dependency Resolution
+DEBUG util.py:421:  Dependencies Resolved
+DEBUG util.py:421:  ================================================================================
+DEBUG util.py:421:   Package                    Arch   Version                       Repository
+DEBUG util.py:421:                                                                             Size
+DEBUG util.py:421:  ================================================================================
+DEBUG util.py:421:  Installing:
+DEBUG util.py:421:   GitPython                  noarch 1.0.1-5.el7                   epel     502 k
+DEBUG util.py:421:   python-anyjson             noarch 0.3.3-3.el7                   AwFofl23  12 k
+DEBUG util.py:421:   python-coverage            x86_64 3.6-0.5.b3.el7                base     153 k
+DEBUG util.py:421:   python-devel               x86_64 2.7.5-39.el7_2                updates  392 k
+DEBUG util.py:421:   python-kombu               noarch 1:3.0.32-1.el7                AwFofl23 483 k
+DEBUG util.py:421:   python-pbr                 noarch 1.8.1-2.el7                   AwFofl23 161 k
+DEBUG util.py:421:   python-semantic_version    noarch 2.4.2-1.el7                   AwFofl23  22 k
+DEBUG util.py:421:   python-sphinx              noarch 1.2.3-4.el7                   AwFofl23 1.2 M
+DEBUG util.py:421:   python-testrepository      noarch 0.0.18-2.el7                  AwFofl23 161 k
+DEBUG util.py:421:   python-testtools           noarch 1.8.0-2.el7                   AwFofl23 301 k
+DEBUG util.py:421:   python-unittest2           noarch 1.0.1-1.el7                   AwFofl23 170 k
+DEBUG util.py:421:   python2-hacking            noarch 0.11.1-0.20160928202542.206d40b.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh 126 k
+DEBUG util.py:421:   python2-mock               noarch 2.0.0-1.el7                   AwFofl23 120 k
+DEBUG util.py:421:   python2-oslo-config        noarch 2:3.17.0-0.20160920171017.8db0b7c.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh 177 k
+DEBUG util.py:421:   python2-oslo-log           noarch 3.16.0-0.20160923102432.573e049.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  51 k
+DEBUG util.py:421:   python2-oslo-service       noarch 1.16.0-0.20160907193203.9df6088.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  58 k
+DEBUG util.py:421:   python2-oslo-sphinx        noarch 4.7.1-0.20160916002204.0f2d738.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  30 k
+DEBUG util.py:421:   python2-oslo-utils         noarch 3.16.0-0.20160923101639.e1d503c.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  65 k
+DEBUG util.py:421:   python2-reno               noarch 1.8.0-0.20160916122805.50c6ed3.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  51 k
+DEBUG util.py:421:   python2-setuptools         noarch 22.0.5-1.el7                  AwFofl23 485 k
+DEBUG util.py:421:   systemd                    x86_64 219-19.el7_2.13               updates  5.1 M
+DEBUG util.py:421:  Installing for dependencies:
+DEBUG util.py:421:   PyYAML                     x86_64 3.10-11.el7                   base     153 k
+DEBUG util.py:421:   acl                        x86_64 2.2.51-12.el7                 base      81 k
+DEBUG util.py:421:   cryptsetup-libs            x86_64 1.6.7-1.el7                   base     182 k
+DEBUG util.py:421:   dbus                       x86_64 1:1.6.12-14.el7_2             updates  306 k
+DEBUG util.py:421:   dbus-libs                  x86_64 1:1.6.12-14.el7_2             updates  151 k
+DEBUG util.py:421:   device-mapper              x86_64 7:1.02.107-5.el7_2.5          updates  252 k
+DEBUG util.py:421:   device-mapper-libs         x86_64 7:1.02.107-5.el7_2.5          updates  305 k
+DEBUG util.py:421:   dracut                     x86_64 033-360.el7_2.1               updates  311 k
+DEBUG util.py:421:   fipscheck                  x86_64 1.4.1-5.el7                   base      21 k
+DEBUG util.py:421:   fipscheck-lib              x86_64 1.4.1-5.el7                   base      11 k
+DEBUG util.py:421:   freetype                   x86_64 2.4.11-11.el7                 base     391 k
+DEBUG util.py:421:   git                        x86_64 1.8.3.1-6.el7_2.1             updates  4.4 M
+DEBUG util.py:421:   hardlink                   x86_64 1:1.0-19.el7                  base      14 k
+DEBUG util.py:421:   jbigkit-libs               x86_64 2.0-11.el7                    base      46 k
+DEBUG util.py:421:   kmod                       x86_64 20-8.el7_2                    updates  114 k
+DEBUG util.py:421:   kmod-libs                  x86_64 20-8.el7_2                    updates   47 k
+DEBUG util.py:421:   kpartx                     x86_64 0.4.9-85.el7_2.6              updates   60 k
+DEBUG util.py:421:   less                       x86_64 458-9.el7                     base     120 k
+DEBUG util.py:421:   libedit                    x86_64 3.0-12.20121213cvs.el7        base      92 k
+DEBUG util.py:421:   libgnome-keyring           x86_64 3.8.0-3.el7                   base     109 k
+DEBUG util.py:421:   libjpeg-turbo              x86_64 1.2.90-5.el7                  base     134 k
+DEBUG util.py:421:   libtiff                    x86_64 4.0.3-25.el7_2                updates  169 k
+DEBUG util.py:421:   libwebp                    x86_64 0.3.0-3.el7                   base     170 k
+DEBUG util.py:421:   libyaml                    x86_64 0.1.4-11.el7_0                base      55 k
+DEBUG util.py:421:   openssh                    x86_64 6.6.1p1-25.el7_2              updates  435 k
+DEBUG util.py:421:   openssh-clients            x86_64 6.6.1p1-25.el7_2              updates  639 k
+DEBUG util.py:421:   openssl                    x86_64 1:1.0.1e-51.el7_2.7           updates  712 k
+DEBUG util.py:421:   perl-Error                 noarch 1:0.17020-2.el7               base      32 k
+DEBUG util.py:421:   perl-Git                   noarch 1.8.3.1-6.el7_2.1             updates   53 k
+DEBUG util.py:421:   perl-TermReadKey           x86_64 2.30-20.el7                   base      31 k
+DEBUG util.py:421:   procps-ng                  x86_64 3.3.10-5.el7_2                updates  287 k
+DEBUG util.py:421:   pyOpenSSL                  noarch 0.15.1-1.el7                  AwFofl23 181 k
+DEBUG util.py:421:   pyflakes                   noarch 0.9.2-1.el7                   AwFofl23  42 k
+DEBUG util.py:421:   pyparsing                  noarch 2.0.3-1.el7                   AwFofl23  98 k
+DEBUG util.py:421:   python                     x86_64 2.7.5-39.el7_2                updates   89 k
+DEBUG util.py:421:   python-amqp                noarch 1.4.6-1.el7                   AwFofl23  81 k
+DEBUG util.py:421:   python-backports           x86_64 1.0-8.el7                     base     5.8 k
+DEBUG util.py:421:   python-backports-ssl_match_hostname
+DEBUG util.py:421:                              noarch 3.4.0.2-4.el7                 base      12 k
+DEBUG util.py:421:   python-chardet             noarch 2.2.1-1.el7_1                 base     227 k
+DEBUG util.py:421:   python-dateutil            noarch 1:2.4.2-1.el7                 AwFofl23  83 k
+DEBUG util.py:421:   python-docutils            noarch 0.11-0.2.20130715svn7687.el7  base     1.5 M
+DEBUG util.py:421:   python-enum34              noarch 1.0-4.el7                     AwFofl23  50 k
+DEBUG util.py:421:   python-extras              noarch 0.0.3-2.el7                   AwFofl23  12 k
+DEBUG util.py:421:   python-fixtures            noarch 3.0.0-2.el7                   AwFofl23  87 k
+DEBUG util.py:421:   python-flake8              noarch 2.4.1-2.el7                   AwFofl23  47 k
+DEBUG util.py:421:   python-gitdb               x86_64 0.6.4-4.el7                   epel     114 k
+DEBUG util.py:421:   python-idna                noarch 2.0-1.el7                     AwFofl23  91 k
+DEBUG util.py:421:   python-inotify             noarch 0.9.4-4.el7                   base      49 k
+DEBUG util.py:421:   python-ipaddress           noarch 1.0.16-3.el7                  AwFofl23  33 k
+DEBUG util.py:421:   python-jinja2              noarch 2.7.2-2.el7                   base     515 k
+DEBUG util.py:421:   python-linecache2          noarch 1.0.0-1.el7                   AwFofl23  11 k
+DEBUG util.py:421:   python-markupsafe          x86_64 0.11-10.el7                   base      25 k
+DEBUG util.py:421:   python-mccabe              noarch 0.2.1-4.el7                   AwFofl23  12 k
+DEBUG util.py:421:   python-mimeparse           noarch 0.1.4-1.el7                   AwFofl23 8.1 k
+DEBUG util.py:421:   python-monotonic           noarch 0.6-1.el7                     AwFofl23 8.3 k
+DEBUG util.py:421:   python-netaddr             noarch 0.7.18-1.el7                  AwFofl23 1.3 M
+DEBUG util.py:421:   python-netifaces           x86_64 0.10.4-1.el7                  AwFofl23  16 k
+DEBUG util.py:421:   python-oslo-concurrency-lang
+DEBUG util.py:421:                              noarch 3.14.0-0.20160923102201.ebd3921.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh 8.5 k
+DEBUG util.py:421:   python-oslo-i18n-lang      noarch 3.9.0-0.20160922194815.1f8d018.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh 8.9 k
+DEBUG util.py:421:   python-oslo-log-lang       noarch 3.16.0-0.20160923102432.573e049.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh 8.0 k
+DEBUG util.py:421:   python-oslo-utils-lang     noarch 3.16.0-0.20160923101639.e1d503c.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh 7.8 k
+DEBUG util.py:421:   python-paste               noarch 1.7.5.1-9.20111221hg1498.el7  base     866 k
+DEBUG util.py:421:   python-paste-deploy        noarch 1.5.2-6.el7                   AwFofl23  45 k
+DEBUG util.py:421:   python-pep8                noarch 1.5.7-2.el7                   AwFofl23 152 k
+DEBUG util.py:421:   python-pillow              x86_64 2.0.0-19.gitd1c6db8.el7       base     438 k
+DEBUG util.py:421:   python-ply                 noarch 3.4-4.el7                     AwFofl23 123 k
+DEBUG util.py:421:   python-posix_ipc           x86_64 0.9.8-1.el7                   AwFofl23  45 k
+DEBUG util.py:421:   python-pycparser           noarch 2.10-1.el7                    AwFofl23  99 k
+DEBUG util.py:421:   python-pygments            noarch 2.0.2-4.el7                   AwFofl23 1.6 M
+DEBUG util.py:421:   python-repoze-lru          noarch 0.4-3.el7                     AwFofl23  12 k
+DEBUG util.py:421:   python-requests            noarch 2.10.0-1.el7                  AwFofl23 102 k
+DEBUG util.py:421:   python-retrying            noarch 1.2.3-4.el7                   AwFofl23  15 k
+DEBUG util.py:421:   python-rfc3986             noarch 0.2.0-1.el7                   AwFofl23  19 k
+DEBUG util.py:421:   python-routes              noarch 1.13-2.el7                    AwFofl23 639 k
+DEBUG util.py:421:   python-six                 noarch 1.9.0-1.el7                   AwFofl23  28 k
+DEBUG util.py:421:   python-smmap               noarch 0.9.0-5.el7                   epel      28 k
+DEBUG util.py:421:   python-subunit             noarch 1.0.0-1.el7                   AwFofl23  79 k
+DEBUG util.py:421:   python-tempita             noarch 0.5.1-8.el7                   AwFofl23  32 k
+DEBUG util.py:421:   python-urllib3             noarch 1.15.1-2.el7                  AwFofl23 123 k
+DEBUG util.py:421:   python-webob               noarch 1.4.1-2.el7                   AwFofl23 211 k
+DEBUG util.py:421:   python-wrapt               x86_64 1.10.8-2.el7                  AwFofl23  45 k
+DEBUG util.py:421:   python2-babel              noarch 2.3.4-1.el7                   AwFofl23 4.8 M
+DEBUG util.py:421:   python2-cffi               x86_64 1.5.2-1.el7                   AwFofl23 214 k
+DEBUG util.py:421:   python2-cryptography       x86_64 1.2.1-3.el7                   AwFofl23 461 k
+DEBUG util.py:421:   python2-debtcollector      noarch 1.8.0-0.20160915220215.4e9659a.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  27 k
+DEBUG util.py:421:   python2-eventlet           noarch 0.18.4-2.el7                  AwFofl23 251 k
+DEBUG util.py:421:   python2-fasteners          noarch 0.14.1-4.el7                  AwFofl23  37 k
+DEBUG util.py:421:   python2-funcsigs           noarch 0.4-2.el7                     AwFofl23  25 k
+DEBUG util.py:421:   python2-greenlet           x86_64 0.4.9-1.el7                   AwFofl23  29 k
+DEBUG util.py:421:   python2-iso8601            noarch 0.1.11-1.el7                  AwFofl23  18 k
+DEBUG util.py:421:   python2-msgpack            x86_64 0.4.8-1.el7                   epel      83 k
+DEBUG util.py:421:   python2-oslo-concurrency   noarch 3.14.0-0.20160923102201.ebd3921.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  34 k
+DEBUG util.py:421:   python2-oslo-context       noarch 2.9.0-0.20160907010300.0ad0950.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  16 k
+DEBUG util.py:421:   python2-oslo-i18n          noarch 3.9.0-0.20160922194815.1f8d018.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  51 k
+DEBUG util.py:421:   python2-oslo-serialization noarch 2.13.0-0.20160906185312.1f86a66.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  26 k
+DEBUG util.py:421:   python2-positional         noarch 1.1.1-2.el7                   AwFofl23  16 k
+DEBUG util.py:421:   python2-pyasn1             noarch 0.1.9-6.el7.1                 AwFofl23 100 k
+DEBUG util.py:421:   python2-pysocks            noarch 1.5.6-3.el7                   AwFofl23  19 k
+DEBUG util.py:421:   python2-stevedore          noarch 1.17.1-0.20160906123743.62398ed.el7.centos
+DEBUG util.py:421:                                                                   duaWzDsh  55 k
+DEBUG util.py:421:   python2-traceback2         noarch 1.4.0-7.el7                   epel      19 k
+DEBUG util.py:421:   pytz                       noarch 2012d-5.el7                   base      38 k
+DEBUG util.py:421:   qrencode-libs              x86_64 3.4.1-3.el7                   base      50 k
+DEBUG util.py:421:   rsync                      x86_64 3.0.9-17.el7                  base     360 k
+DEBUG util.py:421:  Updating for dependencies:
+DEBUG util.py:421:   openssl-libs               x86_64 1:1.0.1e-51.el7_2.7           updates  953 k
+DEBUG util.py:421:  Transaction Summary
+DEBUG util.py:421:  ================================================================================
+DEBUG util.py:421:  Install  21 Packages (+103 Dependent packages)
+DEBUG util.py:421:  Upgrade              (   1 Dependent package)
+DEBUG util.py:421:  Total size: 36 M
+DEBUG util.py:421:  Total download size: 36 M
+DEBUG util.py:421:  Downloading packages:
+DEBUG util.py:421:  --------------------------------------------------------------------------------
+DEBUG util.py:421:  Total                                              3.5 MB/s |  36 MB  00:10     
+DEBUG util.py:421:  Running transaction check
+DEBUG util.py:421:  Running transaction test
+DEBUG util.py:421:  Transaction test succeeded
+DEBUG util.py:421:  Running transaction
+DEBUG util.py:421:    Installing : python-2.7.5-39.el7_2.x86_64                               1/126 
+DEBUG util.py:421:    Installing : python-six-1.9.0-1.el7.noarch                              2/126 
+DEBUG util.py:421:    Installing : python2-setuptools-22.0.5-1.el7.noarch                     3/126 
+DEBUG util.py:421:    Installing : python-pbr-1.8.1-2.el7.noarch                              4/126 
+DEBUG util.py:421:    Updating   : 1:openssl-libs-1.0.1e-51.el7_2.7.x86_64                    5/126 
+DEBUG util.py:421:    Installing : python2-iso8601-0.1.11-1.el7.noarch                        6/126 
+DEBUG util.py:421:    Installing : python-extras-0.0.3-2.el7.noarch                           7/126 
+DEBUG util.py:421:    Installing : pyflakes-0.9.2-1.el7.noarch                                8/126 
+DEBUG util.py:421:    Installing : python-enum34-1.0-4.el7.noarch                             9/126 
+DEBUG util.py:421:    Installing : python2-greenlet-0.4.9-1.el7.x86_64                       10/126 
+DEBUG util.py:421:    Installing : python-monotonic-0.6-1.el7.noarch                         11/126 
+DEBUG util.py:421:    Installing : python-ipaddress-1.0.16-3.el7.noarch                      12/126 
+DEBUG util.py:421:    Installing : python-netaddr-0.7.18-1.el7.noarch                        13/126 
+DEBUG util.py:421:    Installing : python2-funcsigs-0.4-2.el7.noarch                         14/126 
+DEBUG util.py:421:    Installing : python-wrapt-1.10.8-2.el7.x86_64                          15/126 
+DEBUG util.py:421:    Installing : pytz-2012d-5.el7.noarch                                   16/126 
+DEBUG util.py:421:    Installing : python2-babel-2.3.4-1.el7.noarch                          17/126 
+DEBUG util.py:421:    Installing : python2-debtcollector-1.8.0-0.20160915220215.4e9659a.e    18/126 
+DEBUG util.py:421:    Installing : 1:dbus-libs-1.6.12-14.el7_2.x86_64                        19/126 
+DEBUG util.py:421:    Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                         20/126 
+DEBUG util.py:421:    Installing : 1:perl-Error-0.17020-2.el7.noarch                         21/126 
+DEBUG util.py:421:    Installing : libgnome-keyring-3.8.0-3.el7.x86_64                       22/126 
+DEBUG util.py:421:    Installing : python2-positional-1.1.1-2.el7.noarch                     23/126 
+DEBUG util.py:421:    Installing : python2-oslo-context-2.9.0-0.20160907010300.0ad0950.el    24/126 
+DEBUG util.py:421:    Installing : python2-eventlet-0.18.4-2.el7.noarch                      25/126 
+DEBUG util.py:421:    Installing : 1:openssl-1.0.1e-51.el7_2.7.x86_64                        26/126 
+DEBUG util.py:421:    Installing : fipscheck-1.4.1-5.el7.x86_64                              27/126 
+DEBUG util.py:421:    Installing : fipscheck-lib-1.4.1-5.el7.x86_64                          28/126 
+DEBUG util.py:421:    Installing : openssh-6.6.1p1-25.el7_2.x86_64                           29/126 
+DEBUG util.py:421:    Installing : python2-stevedore-1.17.1-0.20160906123743.62398ed.el7.    30/126 
+DEBUG util.py:421:    Installing : python-pep8-1.5.7-2.el7.noarch                            31/126 
+DEBUG util.py:421:    Installing : python2-fasteners-0.14.1-4.el7.noarch                     32/126 
+DEBUG util.py:421:    Installing : python-retrying-1.2.3-4.el7.noarch                        33/126 
+DEBUG util.py:421:    Installing : 1:python-dateutil-2.4.2-1.el7.noarch                      34/126 
+DEBUG util.py:421:    Installing : python-mimeparse-0.1.4-1.el7.noarch                       35/126 
+DEBUG util.py:421:    Installing : python-markupsafe-0.11-10.el7.x86_64                      36/126 
+DEBUG util.py:421:    Installing : python-jinja2-2.7.2-2.el7.noarch                          37/126 
+DEBUG util.py:421:    Installing : python-backports-1.0-8.el7.x86_64                         38/126 
+DEBUG util.py:421:    Installing : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noar    39/126 
+DEBUG util.py:421:    Installing : python-repoze-lru-0.4-3.el7.noarch                        40/126 
+DEBUG util.py:421:    Installing : python-routes-1.13-2.el7.noarch                           41/126 
+DEBUG util.py:421:    Installing : python-rfc3986-0.2.0-1.el7.noarch                         42/126 
+DEBUG util.py:421:    Installing : pyparsing-2.0.3-1.el7.noarch                              43/126 
+DEBUG util.py:421:    Installing : python-netifaces-0.10.4-1.el7.x86_64                      44/126 
+DEBUG util.py:421:    Installing : python2-msgpack-0.4.8-1.el7.x86_64                        45/126 
+DEBUG util.py:421:    Installing : python-tempita-0.5.1-8.el7.noarch                         46/126 
+DEBUG util.py:421:    Installing : python-posix_ipc-0.9.8-1.el7.x86_64                       47/126 
+DEBUG util.py:421:    Installing : python-anyjson-0.3.3-3.el7.noarch                         48/126 
+DEBUG util.py:421:    Installing : python-mccabe-0.2.1-4.el7.noarch                          49/126 
+DEBUG util.py:421:    Installing : python-flake8-2.4.1-2.el7.noarch                          50/126 
+DEBUG util.py:421:    Installing : python-linecache2-1.0.0-1.el7.noarch                      51/126 
+DEBUG util.py:421:    Installing : python2-traceback2-1.4.0-7.el7.noarch                     52/126 
+DEBUG util.py:421:    Installing : python-unittest2-1.0.1-1.el7.noarch                       53/126 
+DEBUG util.py:421:    Installing : python-testtools-1.8.0-2.el7.noarch                       54/126 
+DEBUG util.py:421:    Installing : python-fixtures-3.0.0-2.el7.noarch                        55/126 
+DEBUG util.py:421:    Installing : python-subunit-1.0.0-1.el7.noarch                         56/126 
+DEBUG util.py:421:    Installing : python-smmap-0.9.0-5.el7.noarch                           57/126 
+DEBUG util.py:421:    Installing : python-gitdb-0.6.4-4.el7.x86_64                           58/126 
+DEBUG util.py:421:    Installing : python-ply-3.4-4.el7.noarch                               59/126 
+DEBUG util.py:421:    Installing : python-pycparser-2.10-1.el7.noarch                        60/126 
+DEBUG util.py:421:    Installing : python2-cffi-1.5.2-1.el7.x86_64                           61/126 
+DEBUG util.py:421:    Installing : python-inotify-0.9.4-4.el7.noarch                         62/126 
+DEBUG util.py:421:    Installing : python2-pysocks-1.5.6-3.el7.noarch                        63/126 
+DEBUG util.py:421:    Installing : python-urllib3-1.15.1-2.el7.noarch                        64/126 
+DEBUG util.py:421:    Installing : python2-pyasn1-0.1.9-6.el7.1.noarch                       65/126 
+DEBUG util.py:421:    Installing : python-idna-2.0-1.el7.noarch                              66/126 
+DEBUG util.py:421:    Installing : python2-cryptography-1.2.1-3.el7.x86_64                   67/126 
+DEBUG util.py:421:    Installing : pyOpenSSL-0.15.1-1.el7.noarch                             68/126 
+DEBUG util.py:421:    Installing : python-paste-1.7.5.1-9.20111221hg1498.el7.noarch          69/126 
+DEBUG util.py:421:    Installing : python-paste-deploy-1.5.2-6.el7.noarch                    70/126 
+DEBUG util.py:421:    Installing : python-webob-1.4.1-2.el7.noarch                           71/126 
+DEBUG util.py:421:    Installing : python-amqp-1.4.6-1.el7.noarch                            72/126 
+DEBUG util.py:421:    Installing : python-chardet-2.2.1-1.el7_1.noarch                       73/126 
+DEBUG util.py:421:    Installing : python-requests-2.10.0-1.el7.noarch                       74/126 
+DEBUG util.py:421:    Installing : python-oslo-i18n-lang-3.9.0-0.20160922194815.1f8d018.e    75/126 
+DEBUG util.py:421:    Installing : python2-oslo-i18n-3.9.0-0.20160922194815.1f8d018.el7.c    76/126 
+DEBUG util.py:421:    Installing : 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.    77/126 
+DEBUG util.py:421:    Installing : jbigkit-libs-2.0-11.el7.x86_64                            78/126 
+DEBUG util.py:421:    Installing : libtiff-4.0.3-25.el7_2.x86_64                             79/126 
+DEBUG util.py:421:    Installing : freetype-2.4.11-11.el7.x86_64                             80/126 
+DEBUG util.py:421:    Installing : less-458-9.el7.x86_64                                     81/126 
+DEBUG util.py:421:    Installing : python-oslo-log-lang-3.16.0-0.20160923102432.573e049.e    82/126 
+DEBUG util.py:421:    Installing : acl-2.2.51-12.el7.x86_64                                  83/126 
+DEBUG util.py:421:    Installing : procps-ng-3.3.10-5.el7_2.x86_64                           84/126 
+DEBUG util.py:421:    Installing : qrencode-libs-3.4.1-3.el7.x86_64                          85/126 
+DEBUG util.py:421:    Installing : libwebp-0.3.0-3.el7.x86_64                                86/126 
+DEBUG util.py:421:    Installing : python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64              87/126 
+DEBUG util.py:421:    Installing : python-docutils-0.11-0.2.20130715svn7687.el7.noarch       88/126 
+DEBUG util.py:421:    Installing : python-pygments-2.0.2-4.el7.noarch                        89/126 
+DEBUG util.py:421:    Installing : 1:hardlink-1.0-19.el7.x86_64                              90/126 
+DEBUG util.py:421:    Installing : kmod-libs-20-8.el7_2.x86_64                               91/126 
+DEBUG util.py:421:    Installing : kpartx-0.4.9-85.el7_2.6.x86_64                            92/126 
+DEBUG util.py:421:    Installing : 7:device-mapper-1.02.107-5.el7_2.5.x86_64                 93/126 
+DEBUG util.py:421:    Installing : 7:device-mapper-libs-1.02.107-5.el7_2.5.x86_64            94/126 
+DEBUG util.py:421:    Installing : cryptsetup-libs-1.6.7-1.el7.x86_64                        95/126 
+DEBUG util.py:421:    Installing : dracut-033-360.el7_2.1.x86_64                             96/126 
+DEBUG util.py:421:    Installing : kmod-20-8.el7_2.x86_64                                    97/126 
+DEBUG util.py:421:    Installing : systemd-219-19.el7_2.13.x86_64                            98/126 
+DEBUG util.py:421:    Installing : 1:dbus-1.6.12-14.el7_2.x86_64                             99/126 
+DEBUG util.py:421:    Installing : rsync-3.0.9-17.el7.x86_64                                100/126 
+DEBUG util.py:421:    Installing : python-oslo-utils-lang-3.16.0-0.20160923101639.e1d503c   101/126 
+DEBUG util.py:421:    Installing : python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7   102/126 
+DEBUG util.py:421:    Installing : python2-oslo-serialization-2.13.0-0.20160906185312.1f8   103/126 
+DEBUG util.py:421:    Installing : python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.c   104/126 
+DEBUG util.py:421:    Installing : libedit-3.0-12.20121213cvs.el7.x86_64                    105/126 
+DEBUG util.py:421:    Installing : openssh-clients-6.6.1p1-25.el7_2.x86_64                  106/126 
+DEBUG util.py:421:    Installing : libyaml-0.1.4-11.el7_0.x86_64                            107/126 
+DEBUG util.py:421:    Installing : PyYAML-3.10-11.el7.x86_64                                108/126 
+DEBUG util.py:421:    Installing : python-oslo-concurrency-lang-3.14.0-0.20160923102201.e   109/126 
+DEBUG util.py:421:    Installing : python2-oslo-concurrency-3.14.0-0.20160923102201.ebd39   110/126 
+DEBUG util.py:421:    Installing : perl-TermReadKey-2.30-20.el7.x86_64                      111/126 
+DEBUG util.py:421:    Installing : perl-Git-1.8.3.1-6.el7_2.1.noarch                        112/126 
+DEBUG util.py:421:    Installing : git-1.8.3.1-6.el7_2.1.x86_64                             113/126 
+DEBUG util.py:421:    Installing : python2-oslo-sphinx-4.7.1-0.20160916002204.0f2d738.el7   114/126 
+DEBUG util.py:421:    Installing : GitPython-1.0.1-5.el7.noarch                             115/126 
+DEBUG util.py:421:    Installing : python2-reno-1.8.0-0.20160916122805.50c6ed3.el7.centos   116/126 
+DEBUG util.py:421:    Installing : python2-oslo-service-1.16.0-0.20160907193203.9df6088.e   117/126 
+DEBUG util.py:421:    Installing : python-sphinx-1.2.3-4.el7.noarch                         118/126 
+DEBUG util.py:421:    Installing : 1:python-kombu-3.0.32-1.el7.noarch                       119/126 
+DEBUG util.py:421:    Installing : python-testrepository-0.0.18-2.el7.noarch                120/126 
+DEBUG util.py:421:    Installing : python2-hacking-0.11.1-0.20160928202542.206d40b.el7.ce   121/126 
+DEBUG util.py:421:    Installing : python2-mock-2.0.0-1.el7.noarch                          122/126 
+DEBUG util.py:421:    Installing : python-coverage-3.6-0.5.b3.el7.x86_64                    123/126 
+DEBUG util.py:421:    Installing : python-devel-2.7.5-39.el7_2.x86_64                       124/126 
+DEBUG util.py:421:    Installing : python-semantic_version-2.4.2-1.el7.noarch               125/126 
+DEBUG util.py:421:    Cleanup    : 1:openssl-libs-1.0.1e-51.el7_2.5.x86_64                  126/126 
+DEBUG util.py:421:    Verifying  : python-enum34-1.0-4.el7.noarch                             1/126 
+DEBUG util.py:421:    Verifying  : python-pbr-1.8.1-2.el7.noarch                              2/126 
+DEBUG util.py:421:    Verifying  : pyOpenSSL-0.15.1-1.el7.noarch                              3/126 
+DEBUG util.py:421:    Verifying  : python-testrepository-0.0.18-2.el7.noarch                  4/126 
+DEBUG util.py:421:    Verifying  : python-routes-1.13-2.el7.noarch                            5/126 
+DEBUG util.py:421:    Verifying  : 1:dbus-1.6.12-14.el7_2.x86_64                              6/126 
+DEBUG util.py:421:    Verifying  : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noar     7/126 
+DEBUG util.py:421:    Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                        8/126 
+DEBUG util.py:421:    Verifying  : python-mimeparse-0.1.4-1.el7.noarch                        9/126 
+DEBUG util.py:421:    Verifying  : python-paste-deploy-1.5.2-6.el7.noarch                    10/126 
+DEBUG util.py:421:    Verifying  : dracut-033-360.el7_2.1.x86_64                             11/126 
+DEBUG util.py:421:    Verifying  : python-oslo-concurrency-lang-3.14.0-0.20160923102201.e    12/126 
+DEBUG util.py:421:    Verifying  : python-markupsafe-0.11-10.el7.x86_64                      13/126 
+DEBUG util.py:421:    Verifying  : libyaml-0.1.4-11.el7_0.x86_64                             14/126 
+DEBUG util.py:421:    Verifying  : perl-Git-1.8.3.1-6.el7_2.1.noarch                         15/126 
+DEBUG util.py:421:    Verifying  : python2-babel-2.3.4-1.el7.noarch                          16/126 
+DEBUG util.py:421:    Verifying  : python-backports-1.0-8.el7.x86_64                         17/126 
+DEBUG util.py:421:    Verifying  : python-repoze-lru-0.4-3.el7.noarch                        18/126 
+DEBUG util.py:421:    Verifying  : fipscheck-lib-1.4.1-5.el7.x86_64                          19/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-concurrency-3.14.0-0.20160923102201.ebd39    20/126 
+DEBUG util.py:421:    Verifying  : libedit-3.0-12.20121213cvs.el7.x86_64                     21/126 
+DEBUG util.py:421:    Verifying  : python2-stevedore-1.17.1-0.20160906123743.62398ed.el7.    22/126 
+DEBUG util.py:421:    Verifying  : python-six-1.9.0-1.el7.noarch                             23/126 
+DEBUG util.py:421:    Verifying  : PyYAML-3.10-11.el7.x86_64                                 24/126 
+DEBUG util.py:421:    Verifying  : python-oslo-utils-lang-3.16.0-0.20160923101639.e1d503c    25/126 
+DEBUG util.py:421:    Verifying  : python-jinja2-2.7.2-2.el7.noarch                          26/126 
+DEBUG util.py:421:    Verifying  : python-unittest2-1.0.1-1.el7.noarch                       27/126 
+DEBUG util.py:421:    Verifying  : python2-positional-1.1.1-2.el7.noarch                     28/126 
+DEBUG util.py:421:    Verifying  : python-pep8-1.5.7-2.el7.noarch                            29/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-utils-3.16.0-0.20160923101639.e1d503c.el7    30/126 
+DEBUG util.py:421:    Verifying  : kpartx-0.4.9-85.el7_2.6.x86_64                            31/126 
+DEBUG util.py:421:    Verifying  : python-gitdb-0.6.4-4.el7.x86_64                           32/126 
+DEBUG util.py:421:    Verifying  : python2-cryptography-1.2.1-3.el7.x86_64                   33/126 
+DEBUG util.py:421:    Verifying  : python-devel-2.7.5-39.el7_2.x86_64                        34/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-sphinx-4.7.1-0.20160916002204.0f2d738.el7    35/126 
+DEBUG util.py:421:    Verifying  : python-rfc3986-0.2.0-1.el7.noarch                         36/126 
+DEBUG util.py:421:    Verifying  : python2-fasteners-0.14.1-4.el7.noarch                     37/126 
+DEBUG util.py:421:    Verifying  : 1:openssl-1.0.1e-51.el7_2.7.x86_64                        38/126 
+DEBUG util.py:421:    Verifying  : 1:perl-Error-0.17020-2.el7.noarch                         39/126 
+DEBUG util.py:421:    Verifying  : pyparsing-2.0.3-1.el7.noarch                              40/126 
+DEBUG util.py:421:    Verifying  : python2-setuptools-22.0.5-1.el7.noarch                    41/126 
+DEBUG util.py:421:    Verifying  : python-netifaces-0.10.4-1.el7.x86_64                      42/126 
+DEBUG util.py:421:    Verifying  : cryptsetup-libs-1.6.7-1.el7.x86_64                        43/126 
+DEBUG util.py:421:    Verifying  : git-1.8.3.1-6.el7_2.1.x86_64                              44/126 
+DEBUG util.py:421:    Verifying  : python-paste-1.7.5.1-9.20111221hg1498.el7.noarch          45/126 
+DEBUG util.py:421:    Verifying  : python-pillow-2.0.0-19.gitd1c6db8.el7.x86_64              46/126 
+DEBUG util.py:421:    Verifying  : python2-greenlet-0.4.9-1.el7.x86_64                       47/126 
+DEBUG util.py:421:    Verifying  : python2-msgpack-0.4.8-1.el7.x86_64                        48/126 
+DEBUG util.py:421:    Verifying  : python-semantic_version-2.4.2-1.el7.noarch                49/126 
+DEBUG util.py:421:    Verifying  : python-monotonic-0.6-1.el7.noarch                         50/126 
+DEBUG util.py:421:    Verifying  : kmod-libs-20-8.el7_2.x86_64                               51/126 
+DEBUG util.py:421:    Verifying  : python-tempita-0.5.1-8.el7.noarch                         52/126 
+DEBUG util.py:421:    Verifying  : 1:hardlink-1.0-19.el7.x86_64                              53/126 
+DEBUG util.py:421:    Verifying  : libwebp-0.3.0-3.el7.x86_64                                54/126 
+DEBUG util.py:421:    Verifying  : python-coverage-3.6-0.5.b3.el7.x86_64                     55/126 
+DEBUG util.py:421:    Verifying  : python-fixtures-3.0.0-2.el7.noarch                        56/126 
+DEBUG util.py:421:    Verifying  : python-docutils-0.11-0.2.20130715svn7687.el7.noarch       57/126 
+DEBUG util.py:421:    Verifying  : python-posix_ipc-0.9.8-1.el7.x86_64                       58/126 
+DEBUG util.py:421:    Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         59/126 
+DEBUG util.py:421:    Verifying  : python-anyjson-0.3.3-3.el7.noarch                         60/126 
+DEBUG util.py:421:    Verifying  : python-extras-0.0.3-2.el7.noarch                          61/126 
+DEBUG util.py:421:    Verifying  : python-mccabe-0.2.1-4.el7.noarch                          62/126 
+DEBUG util.py:421:    Verifying  : python-sphinx-1.2.3-4.el7.noarch                          63/126 
+DEBUG util.py:421:    Verifying  : python-flake8-2.4.1-2.el7.noarch                          64/126 
+DEBUG util.py:421:    Verifying  : GitPython-1.0.1-5.el7.noarch                              65/126 
+DEBUG util.py:421:    Verifying  : python-linecache2-1.0.0-1.el7.noarch                      66/126 
+DEBUG util.py:421:    Verifying  : qrencode-libs-3.4.1-3.el7.x86_64                          67/126 
+DEBUG util.py:421:    Verifying  : procps-ng-3.3.10-5.el7_2.x86_64                           68/126 
+DEBUG util.py:421:    Verifying  : python-ipaddress-1.0.16-3.el7.noarch                      69/126 
+DEBUG util.py:421:    Verifying  : python-smmap-0.9.0-5.el7.noarch                           70/126 
+DEBUG util.py:421:    Verifying  : acl-2.2.51-12.el7.x86_64                                  71/126 
+DEBUG util.py:421:    Verifying  : python-pygments-2.0.2-4.el7.noarch                        72/126 
+DEBUG util.py:421:    Verifying  : python2-eventlet-0.18.4-2.el7.noarch                      73/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-service-1.16.0-0.20160907193203.9df6088.e    74/126 
+DEBUG util.py:421:    Verifying  : python-2.7.5-39.el7_2.x86_64                              75/126 
+DEBUG util.py:421:    Verifying  : 2:python2-oslo-config-3.17.0-0.20160920171017.8db0b7c.    76/126 
+DEBUG util.py:421:    Verifying  : python2-reno-1.8.0-0.20160916122805.50c6ed3.el7.centos    77/126 
+DEBUG util.py:421:    Verifying  : libgnome-keyring-3.8.0-3.el7.x86_64                       78/126 
+DEBUG util.py:421:    Verifying  : python-ply-3.4-4.el7.noarch                               79/126 
+DEBUG util.py:421:    Verifying  : python-oslo-log-lang-3.16.0-0.20160923102432.573e049.e    80/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-i18n-3.9.0-0.20160922194815.1f8d018.el7.c    81/126 
+DEBUG util.py:421:    Verifying  : python-pycparser-2.10-1.el7.noarch                        82/126 
+DEBUG util.py:421:    Verifying  : rsync-3.0.9-17.el7.x86_64                                 83/126 
+DEBUG util.py:421:    Verifying  : python2-hacking-0.11.1-0.20160928202542.206d40b.el7.ce    84/126 
+DEBUG util.py:421:    Verifying  : less-458-9.el7.x86_64                                     85/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-serialization-2.13.0-0.20160906185312.1f8    86/126 
+DEBUG util.py:421:    Verifying  : 7:device-mapper-1.02.107-5.el7_2.5.x86_64                 87/126 
+DEBUG util.py:421:    Verifying  : freetype-2.4.11-11.el7.x86_64                             88/126 
+DEBUG util.py:421:    Verifying  : python-inotify-0.9.4-4.el7.noarch                         89/126 
+DEBUG util.py:421:    Verifying  : python-testtools-1.8.0-2.el7.noarch                       90/126 
+DEBUG util.py:421:    Verifying  : 1:python-kombu-3.0.32-1.el7.noarch                        91/126 
+DEBUG util.py:421:    Verifying  : 1:openssl-libs-1.0.1e-51.el7_2.7.x86_64                   92/126 
+DEBUG util.py:421:    Verifying  : python-retrying-1.2.3-4.el7.noarch                        93/126 
+DEBUG util.py:421:    Verifying  : python2-mock-2.0.0-1.el7.noarch                           94/126 
+DEBUG util.py:421:    Verifying  : python-netaddr-0.7.18-1.el7.noarch                        95/126 
+DEBUG util.py:421:    Verifying  : python2-pysocks-1.5.6-3.el7.noarch                        96/126 
+DEBUG util.py:421:    Verifying  : python2-iso8601-0.1.11-1.el7.noarch                       97/126 
+DEBUG util.py:421:    Verifying  : python-subunit-1.0.0-1.el7.noarch                         98/126 
+DEBUG util.py:421:    Verifying  : python2-funcsigs-0.4-2.el7.noarch                         99/126 
+DEBUG util.py:421:    Verifying  : python2-pyasn1-0.1.9-6.el7.1.noarch                      100/126 
+DEBUG util.py:421:    Verifying  : python-requests-2.10.0-1.el7.noarch                      101/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-context-2.9.0-0.20160907010300.0ad0950.el   102/126 
+DEBUG util.py:421:    Verifying  : python-wrapt-1.10.8-2.el7.x86_64                         103/126 
+DEBUG util.py:421:    Verifying  : openssh-6.6.1p1-25.el7_2.x86_64                          104/126 
+DEBUG util.py:421:    Verifying  : pyflakes-0.9.2-1.el7.noarch                              105/126 
+DEBUG util.py:421:    Verifying  : kmod-20-8.el7_2.x86_64                                   106/126 
+DEBUG util.py:421:    Verifying  : python2-traceback2-1.4.0-7.el7.noarch                    107/126 
+DEBUG util.py:421:    Verifying  : libtiff-4.0.3-25.el7_2.x86_64                            108/126 
+DEBUG util.py:421:    Verifying  : python2-debtcollector-1.8.0-0.20160915220215.4e9659a.e   109/126 
+DEBUG util.py:421:    Verifying  : systemd-219-19.el7_2.13.x86_64                           110/126 
+DEBUG util.py:421:    Verifying  : 1:python-dateutil-2.4.2-1.el7.noarch                     111/126 
+DEBUG util.py:421:    Verifying  : python-idna-2.0-1.el7.noarch                             112/126 
+DEBUG util.py:421:    Verifying  : fipscheck-1.4.1-5.el7.x86_64                             113/126 
+DEBUG util.py:421:    Verifying  : jbigkit-libs-2.0-11.el7.x86_64                           114/126 
+DEBUG util.py:421:    Verifying  : python-webob-1.4.1-2.el7.noarch                          115/126 
+DEBUG util.py:421:    Verifying  : 7:device-mapper-libs-1.02.107-5.el7_2.5.x86_64           116/126 
+DEBUG util.py:421:    Verifying  : python-amqp-1.4.6-1.el7.noarch                           117/126 
+DEBUG util.py:421:    Verifying  : python2-cffi-1.5.2-1.el7.x86_64                          118/126 
+DEBUG util.py:421:    Verifying  : openssh-clients-6.6.1p1-25.el7_2.x86_64                  119/126 
+DEBUG util.py:421:    Verifying  : python-chardet-2.2.1-1.el7_1.noarch                      120/126 
+DEBUG util.py:421:    Verifying  : 1:dbus-libs-1.6.12-14.el7_2.x86_64                       121/126 
+DEBUG util.py:421:    Verifying  : python-urllib3-1.15.1-2.el7.noarch                       122/126 
+DEBUG util.py:421:    Verifying  : pytz-2012d-5.el7.noarch                                  123/126 
+DEBUG util.py:421:    Verifying  : python2-oslo-log-3.16.0-0.20160923102432.573e049.el7.c   124/126 
+DEBUG util.py:421:    Verifying  : python-oslo-i18n-lang-3.9.0-0.20160922194815.1f8d018.e   125/126 
+DEBUG util.py:421:    Verifying  : 1:openssl-libs-1.0.1e-51.el7_2.5.x86_64                  126/126 
+DEBUG util.py:421:  Installed:
+DEBUG util.py:421:    GitPython.noarch 0:1.0.1-5.el7                                                
+DEBUG util.py:421:    python-anyjson.noarch 0:0.3.3-3.el7                                           
+DEBUG util.py:421:    python-coverage.x86_64 0:3.6-0.5.b3.el7                                       
+DEBUG util.py:421:    python-devel.x86_64 0:2.7.5-39.el7_2                                          
+DEBUG util.py:421:    python-kombu.noarch 1:3.0.32-1.el7                                            
+DEBUG util.py:421:    python-pbr.noarch 0:1.8.1-2.el7                                               
+DEBUG util.py:421:    python-semantic_version.noarch 0:2.4.2-1.el7                                  
+DEBUG util.py:421:    python-sphinx.noarch 0:1.2.3-4.el7                                            
+DEBUG util.py:421:    python-testrepository.noarch 0:0.0.18-2.el7                                   
+DEBUG util.py:421:    python-testtools.noarch 0:1.8.0-2.el7                                         
+DEBUG util.py:421:    python-unittest2.noarch 0:1.0.1-1.el7                                         
+DEBUG util.py:421:    python2-hacking.noarch 0:0.11.1-0.20160928202542.206d40b.el7.centos           
+DEBUG util.py:421:    python2-mock.noarch 0:2.0.0-1.el7                                             
+DEBUG util.py:421:    python2-oslo-config.noarch 2:3.17.0-0.20160920171017.8db0b7c.el7.centos       
+DEBUG util.py:421:    python2-oslo-log.noarch 0:3.16.0-0.20160923102432.573e049.el7.centos          
+DEBUG util.py:421:    python2-oslo-service.noarch 0:1.16.0-0.20160907193203.9df6088.el7.centos      
+DEBUG util.py:421:    python2-oslo-sphinx.noarch 0:4.7.1-0.20160916002204.0f2d738.el7.centos        
+DEBUG util.py:421:    python2-oslo-utils.noarch 0:3.16.0-0.20160923101639.e1d503c.el7.centos        
+DEBUG util.py:421:    python2-reno.noarch 0:1.8.0-0.20160916122805.50c6ed3.el7.centos               
+DEBUG util.py:421:    python2-setuptools.noarch 0:22.0.5-1.el7                                      
+DEBUG util.py:421:    systemd.x86_64 0:219-19.el7_2.13                                              
+DEBUG util.py:421:  Dependency Installed:
+DEBUG util.py:421:    PyYAML.x86_64 0:3.10-11.el7                                                   
+DEBUG util.py:421:    acl.x86_64 0:2.2.51-12.el7                                                    
+DEBUG util.py:421:    cryptsetup-libs.x86_64 0:1.6.7-1.el7                                          
+DEBUG util.py:421:    dbus.x86_64 1:1.6.12-14.el7_2                                                 
+DEBUG util.py:421:    dbus-libs.x86_64 1:1.6.12-14.el7_2                                            
+DEBUG util.py:421:    device-mapper.x86_64 7:1.02.107-5.el7_2.5                                     
+DEBUG util.py:421:    device-mapper-libs.x86_64 7:1.02.107-5.el7_2.5                                
+DEBUG util.py:421:    dracut.x86_64 0:033-360.el7_2.1                                               
+DEBUG util.py:421:    fipscheck.x86_64 0:1.4.1-5.el7                                                
+DEBUG util.py:421:    fipscheck-lib.x86_64 0:1.4.1-5.el7                                            
+DEBUG util.py:421:    freetype.x86_64 0:2.4.11-11.el7                                               
+DEBUG util.py:421:    git.x86_64 0:1.8.3.1-6.el7_2.1                                                
+DEBUG util.py:421:    hardlink.x86_64 1:1.0-19.el7                                                  
+DEBUG util.py:421:    jbigkit-libs.x86_64 0:2.0-11.el7                                              
+DEBUG util.py:421:    kmod.x86_64 0:20-8.el7_2                                                      
+DEBUG util.py:421:    kmod-libs.x86_64 0:20-8.el7_2                                                 
+DEBUG util.py:421:    kpartx.x86_64 0:0.4.9-85.el7_2.6                                              
+DEBUG util.py:421:    less.x86_64 0:458-9.el7                                                       
+DEBUG util.py:421:    libedit.x86_64 0:3.0-12.20121213cvs.el7                                       
+DEBUG util.py:421:    libgnome-keyring.x86_64 0:3.8.0-3.el7                                         
+DEBUG util.py:421:    libjpeg-turbo.x86_64 0:1.2.90-5.el7                                           
+DEBUG util.py:421:    libtiff.x86_64 0:4.0.3-25.el7_2                                               
+DEBUG util.py:421:    libwebp.x86_64 0:0.3.0-3.el7                                                  
+DEBUG util.py:421:    libyaml.x86_64 0:0.1.4-11.el7_0                                               
+DEBUG util.py:421:    openssh.x86_64 0:6.6.1p1-25.el7_2                                             
+DEBUG util.py:421:    openssh-clients.x86_64 0:6.6.1p1-25.el7_2                                     
+DEBUG util.py:421:    openssl.x86_64 1:1.0.1e-51.el7_2.7                                            
+DEBUG util.py:421:    perl-Error.noarch 1:0.17020-2.el7                                             
+DEBUG util.py:421:    perl-Git.noarch 0:1.8.3.1-6.el7_2.1                                           
+DEBUG util.py:421:    perl-TermReadKey.x86_64 0:2.30-20.el7                                         
+DEBUG util.py:421:    procps-ng.x86_64 0:3.3.10-5.el7_2                                             
+DEBUG util.py:421:    pyOpenSSL.noarch 0:0.15.1-1.el7                                               
+DEBUG util.py:421:    pyflakes.noarch 0:0.9.2-1.el7                                                 
+DEBUG util.py:421:    pyparsing.noarch 0:2.0.3-1.el7                                                
+DEBUG util.py:421:    python.x86_64 0:2.7.5-39.el7_2                                                
+DEBUG util.py:421:    python-amqp.noarch 0:1.4.6-1.el7                                              
+DEBUG util.py:421:    python-backports.x86_64 0:1.0-8.el7                                           
+DEBUG util.py:421:    python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7                    
+DEBUG util.py:421:    python-chardet.noarch 0:2.2.1-1.el7_1                                         
+DEBUG util.py:421:    python-dateutil.noarch 1:2.4.2-1.el7                                          
+DEBUG util.py:421:    python-docutils.noarch 0:0.11-0.2.20130715svn7687.el7                         
+DEBUG util.py:421:    python-enum34.noarch 0:1.0-4.el7                                              
+DEBUG util.py:421:    python-extras.noarch 0:0.0.3-2.el7                                            
+DEBUG util.py:421:    python-fixtures.noarch 0:3.0.0-2.el7                                          
+DEBUG util.py:421:    python-flake8.noarch 0:2.4.1-2.el7                                            
+DEBUG util.py:421:    python-gitdb.x86_64 0:0.6.4-4.el7                                             
+DEBUG util.py:421:    python-idna.noarch 0:2.0-1.el7                                                
+DEBUG util.py:421:    python-inotify.noarch 0:0.9.4-4.el7                                           
+DEBUG util.py:421:    python-ipaddress.noarch 0:1.0.16-3.el7                                        
+DEBUG util.py:421:    python-jinja2.noarch 0:2.7.2-2.el7                                            
+DEBUG util.py:421:    python-linecache2.noarch 0:1.0.0-1.el7                                        
+DEBUG util.py:421:    python-markupsafe.x86_64 0:0.11-10.el7                                        
+DEBUG util.py:421:    python-mccabe.noarch 0:0.2.1-4.el7                                            
+DEBUG util.py:421:    python-mimeparse.noarch 0:0.1.4-1.el7                                         
+DEBUG util.py:421:    python-monotonic.noarch 0:0.6-1.el7                                           
+DEBUG util.py:421:    python-netaddr.noarch 0:0.7.18-1.el7                                          
+DEBUG util.py:421:    python-netifaces.x86_64 0:0.10.4-1.el7                                        
+DEBUG util.py:421:    python-oslo-concurrency-lang.noarch 0:3.14.0-0.20160923102201.ebd3921.el7.centos
+DEBUG util.py:421:    python-oslo-i18n-lang.noarch 0:3.9.0-0.20160922194815.1f8d018.el7.centos      
+DEBUG util.py:421:    python-oslo-log-lang.noarch 0:3.16.0-0.20160923102432.573e049.el7.centos      
+DEBUG util.py:421:    python-oslo-utils-lang.noarch 0:3.16.0-0.20160923101639.e1d503c.el7.centos    
+DEBUG util.py:421:    python-paste.noarch 0:1.7.5.1-9.20111221hg1498.el7                            
+DEBUG util.py:421:    python-paste-deploy.noarch 0:1.5.2-6.el7                                      
+DEBUG util.py:421:    python-pep8.noarch 0:1.5.7-2.el7                                              
+DEBUG util.py:421:    python-pillow.x86_64 0:2.0.0-19.gitd1c6db8.el7                                
+DEBUG util.py:421:    python-ply.noarch 0:3.4-4.el7                                                 
+DEBUG util.py:421:    python-posix_ipc.x86_64 0:0.9.8-1.el7                                         
+DEBUG util.py:421:    python-pycparser.noarch 0:2.10-1.el7                                          
+DEBUG util.py:421:    python-pygments.noarch 0:2.0.2-4.el7                                          
+DEBUG util.py:421:    python-repoze-lru.noarch 0:0.4-3.el7                                          
+DEBUG util.py:421:    python-requests.noarch 0:2.10.0-1.el7                                         
+DEBUG util.py:421:    python-retrying.noarch 0:1.2.3-4.el7                                          
+DEBUG util.py:421:    python-rfc3986.noarch 0:0.2.0-1.el7                                           
+DEBUG util.py:421:    python-routes.noarch 0:1.13-2.el7                                             
+DEBUG util.py:421:    python-six.noarch 0:1.9.0-1.el7                                               
+DEBUG util.py:421:    python-smmap.noarch 0:0.9.0-5.el7                                             
+DEBUG util.py:421:    python-subunit.noarch 0:1.0.0-1.el7                                           
+DEBUG util.py:421:    python-tempita.noarch 0:0.5.1-8.el7                                           
+DEBUG util.py:421:    python-urllib3.noarch 0:1.15.1-2.el7                                          
+DEBUG util.py:421:    python-webob.noarch 0:1.4.1-2.el7                                             
+DEBUG util.py:421:    python-wrapt.x86_64 0:1.10.8-2.el7                                            
+DEBUG util.py:421:    python2-babel.noarch 0:2.3.4-1.el7                                            
+DEBUG util.py:421:    python2-cffi.x86_64 0:1.5.2-1.el7                                             
+DEBUG util.py:421:    python2-cryptography.x86_64 0:1.2.1-3.el7                                     
+DEBUG util.py:421:    python2-debtcollector.noarch 0:1.8.0-0.20160915220215.4e9659a.el7.centos      
+DEBUG util.py:421:    python2-eventlet.noarch 0:0.18.4-2.el7                                        
+DEBUG util.py:421:    python2-fasteners.noarch 0:0.14.1-4.el7                                       
+DEBUG util.py:421:    python2-funcsigs.noarch 0:0.4-2.el7                                           
+DEBUG util.py:421:    python2-greenlet.x86_64 0:0.4.9-1.el7                                         
+DEBUG util.py:421:    python2-iso8601.noarch 0:0.1.11-1.el7                                         
+DEBUG util.py:421:    python2-msgpack.x86_64 0:0.4.8-1.el7                                          
+DEBUG util.py:421:    python2-oslo-concurrency.noarch 0:3.14.0-0.20160923102201.ebd3921.el7.centos  
+DEBUG util.py:421:    python2-oslo-context.noarch 0:2.9.0-0.20160907010300.0ad0950.el7.centos       
+DEBUG util.py:421:    python2-oslo-i18n.noarch 0:3.9.0-0.20160922194815.1f8d018.el7.centos          
+DEBUG util.py:421:    python2-oslo-serialization.noarch 0:2.13.0-0.20160906185312.1f86a66.el7.centos
+DEBUG util.py:421:    python2-positional.noarch 0:1.1.1-2.el7                                       
+DEBUG util.py:421:    python2-pyasn1.noarch 0:0.1.9-6.el7.1                                         
+DEBUG util.py:421:    python2-pysocks.noarch 0:1.5.6-3.el7                                          
+DEBUG util.py:421:    python2-stevedore.noarch 0:1.17.1-0.20160906123743.62398ed.el7.centos         
+DEBUG util.py:421:    python2-traceback2.noarch 0:1.4.0-7.el7                                       
+DEBUG util.py:421:    pytz.noarch 0:2012d-5.el7                                                     
+DEBUG util.py:421:    qrencode-libs.x86_64 0:3.4.1-3.el7                                            
+DEBUG util.py:421:    rsync.x86_64 0:3.0.9-17.el7                                                   
+DEBUG util.py:421:  Dependency Updated:
+DEBUG util.py:421:    openssl-libs.x86_64 1:1.0.1e-51.el7_2.7                                       
+DEBUG util.py:421:  Complete!
+DEBUG util.py:557:  Child return code was: 0
+INFO buildroot.py:187:  ENTER ['do'](['bash', '--login', '-c', u'/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'], chrootPath='/var/lib/mock/centos-7-x86_64/root'shell=Falseuid=1000env={'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '}gid=135user='mockbuild'timeout=0private_network=Truelogger=<mockbuild.trace_decorator.getLog object at 0x1807250>printOutput=False)
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['bash', '--login', '-c', u'/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/murano-agent.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'PS1': '<mock-chroot> \\s-\\v\\$ '} and shell False
+DEBUG util.py:421:  DEBUG: Unsharing. Flags: 134217728
+DEBUG util.py:421:  Building target platforms: x86_64
+DEBUG util.py:421:  Building for target x86_64
+DEBUG util.py:421:  Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.YsGtJh
+DEBUG util.py:421:  + umask 022
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + rm -rf murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + /usr/bin/gzip -dc /builddir/build/SOURCES/murano-agent-3.0.0.0rc2.tar.gz
+DEBUG util.py:421:  + /usr/bin/tar -xf -
+DEBUG util.py:421:  + STATUS=0
+DEBUG util.py:421:  + '[' 0 -ne 0 ']'
+DEBUG util.py:421:  + cd murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+DEBUG util.py:421:  + rm -rf test-requirements.txt requirements.txt tools/pip-requires tools/test-requires
+DEBUG util.py:421:  + exit 0
+DEBUG util.py:421:  Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.ntoaij
+DEBUG util.py:421:  + umask 022
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + cd murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic'
+DEBUG util.py:421:  + /usr/bin/python2 setup.py build '--executable=/usr/bin/python2 -s'
+DEBUG util.py:421:  running build
+DEBUG util.py:421:  running build_py
+DEBUG util.py:421:  creating build
+DEBUG util.py:421:  creating build/lib
+DEBUG util.py:421:  creating build/lib/muranoagent
+DEBUG util.py:421:  creating build/lib/muranoagent/common
+DEBUG util.py:421:  creating build/lib/muranoagent/common/messaging
+DEBUG util.py:421:  copying muranoagent/common/messaging/mqclient.py -> build/lib/muranoagent/common/messaging
+DEBUG util.py:421:  copying muranoagent/common/messaging/message.py -> build/lib/muranoagent/common/messaging
+DEBUG util.py:421:  copying muranoagent/common/messaging/subscription.py -> build/lib/muranoagent/common/messaging
+DEBUG util.py:421:  copying muranoagent/common/messaging/__init__.py -> build/lib/muranoagent/common/messaging
+DEBUG util.py:421:  creating build/lib/muranoagent/executors
+DEBUG util.py:421:  creating build/lib/muranoagent/executors/application
+DEBUG util.py:421:  copying muranoagent/executors/application/__init__.py -> build/lib/muranoagent/executors/application
+DEBUG util.py:421:  copying muranoagent/executors/chef_puppet_executor_base.py -> build/lib/muranoagent/executors
+DEBUG util.py:421:  copying muranoagent/executors/__init__.py -> build/lib/muranoagent/executors
+DEBUG util.py:421:  creating build/lib/muranoagent/executors/puppet
+DEBUG util.py:421:  copying muranoagent/executors/puppet/__init__.py -> build/lib/muranoagent/executors/puppet
+DEBUG util.py:421:  copying muranoagent/common/__init__.py -> build/lib/muranoagent/common
+DEBUG util.py:421:  copying muranoagent/common/config.py -> build/lib/muranoagent/common
+DEBUG util.py:421:  copying muranoagent/execution_plan_runner.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/exceptions.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/opts.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/execution_result.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/app.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/version.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/bunch.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/__init__.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/execution_plan_queue.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/win32.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/files_manager.py -> build/lib/muranoagent
+DEBUG util.py:421:  copying muranoagent/script_runner.py -> build/lib/muranoagent
+DEBUG util.py:421:  creating build/lib/muranoagent/cmd
+DEBUG util.py:421:  copying muranoagent/cmd/run.py -> build/lib/muranoagent/cmd
+DEBUG util.py:421:  copying muranoagent/cmd/__init__.py -> build/lib/muranoagent/cmd
+DEBUG util.py:421:  creating build/lib/muranoagent/tests
+DEBUG util.py:421:  copying muranoagent/tests/__init__.py -> build/lib/muranoagent/tests
+DEBUG util.py:421:  creating build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  copying muranoagent/tests/unit/test_script_runner.py -> build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  copying muranoagent/tests/unit/test_files_manager.py -> build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  copying muranoagent/tests/unit/test_app.py -> build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  copying muranoagent/tests/unit/__init__.py -> build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  copying muranoagent/tests/unit/base.py -> build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  copying muranoagent/tests/unit/execution_plan.py -> build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  copying muranoagent/tests/unit/test_agent.py -> build/lib/muranoagent/tests/unit
+DEBUG util.py:421:  creating build/lib/muranoagent/executors/chef
+DEBUG util.py:421:  copying muranoagent/executors/chef/__init__.py -> build/lib/muranoagent/executors/chef
+DEBUG util.py:421:  creating build/lib/muranoagent/tests/unit/executors
+DEBUG util.py:421:  copying muranoagent/tests/unit/executors/test_chef.py -> build/lib/muranoagent/tests/unit/executors
+DEBUG util.py:421:  copying muranoagent/tests/unit/executors/__init__.py -> build/lib/muranoagent/tests/unit/executors
+DEBUG util.py:421:  copying muranoagent/tests/unit/executors/test_puppet.py -> build/lib/muranoagent/tests/unit/executors
+DEBUG util.py:421:  running egg_info
+DEBUG util.py:421:  deleting murano_agent.egg-info/requires.txt
+DEBUG util.py:421:  writing murano_agent.egg-info/PKG-INFO
+DEBUG util.py:421:  writing top-level names to murano_agent.egg-info/top_level.txt
+DEBUG util.py:421:  writing dependency_links to murano_agent.egg-info/dependency_links.txt
+DEBUG util.py:421:  writing entry points to murano_agent.egg-info/entry_points.txt
+DEBUG util.py:421:  [pbr] Reusing existing SOURCES.txt
+DEBUG util.py:421:  + sleep 1
+DEBUG util.py:421:  + PYTHONPATH=.
+DEBUG util.py:421:  + oslo-config-generator --config-file etc/oslo-config-generator/muranoagent.conf
+DEBUG util.py:421:  WARNING:stevedore.named:Could not load oslo.log, muranoagent, oslo.service.service
+DEBUG util.py:421:  + export OSLO_PACKAGE_VERSION=3.0.0.0rc2
+DEBUG util.py:421:  + OSLO_PACKAGE_VERSION=3.0.0.0rc2
+DEBUG util.py:421:  + /usr/bin/python2 setup.py build_sphinx
+DEBUG util.py:421:  running build_sphinx
+DEBUG util.py:421:  creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build
+DEBUG util.py:421:  creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build/doctrees
+DEBUG util.py:421:  creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build/html
+DEBUG util.py:421:  [pbr] Generating AUTHORS
+DEBUG util.py:421:  [pbr] AUTHORS complete (0.0s)
+DEBUG util.py:421:  Running Sphinx v1.2.3
+DEBUG util.py:421:  fatal: Not a git repository (or any of the parent directories): .git
+DEBUG util.py:421:  loading pickled environment... not yet created
+DEBUG util.py:421:  building [html]: all source files
+DEBUG util.py:421:  updating environment: 1 added, 0 changed, 0 removed
+DEBUG util.py:421:  reading sources... [100%] index
+DEBUG util.py:421:  looking for now-outdated files... none found
+DEBUG util.py:421:  pickling environment... done
+DEBUG util.py:421:  checking consistency... done
+DEBUG util.py:421:  preparing documents... done
+DEBUG util.py:421:  writing output... [100%] index
+DEBUG util.py:421:  writing additional files... genindex search
+DEBUG util.py:421:  copying static files... done
+DEBUG util.py:421:  copying extra files... done
+DEBUG util.py:421:  dumping search index... done
+DEBUG util.py:421:  dumping object inventory... done
+DEBUG util.py:421:  build succeeded.
+DEBUG util.py:421:  creating /builddir/build/BUILD/murano-agent-3.0.0.0rc2/doc/build/man
+DEBUG util.py:421:  Running Sphinx v1.2.3
+DEBUG util.py:421:  fatal: Not a git repository (or any of the parent directories): .git
+DEBUG util.py:421:  loading pickled environment... done
+DEBUG util.py:421:  building [man]: all source files
+DEBUG util.py:421:  updating environment: 0 added, 0 changed, 0 removed
+DEBUG util.py:421:  looking for now-outdated files... none found
+DEBUG util.py:421:  writing... murano-agent.1 { } 
+DEBUG util.py:421:  build succeeded.
+DEBUG util.py:421:  + rm -rf doc/build/html/.doctrees doc/build/html/.buildinfo
+DEBUG util.py:421:  + exit 0
+DEBUG util.py:421:  Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.c2wVrt
+DEBUG util.py:421:  + umask 022
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + '[' /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64 '!=' / ']'
+DEBUG util.py:421:  + rm -rf /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+DEBUG util.py:421:  ++ dirname /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+DEBUG util.py:421:  + mkdir -p /builddir/build/BUILDROOT
+DEBUG util.py:421:  + mkdir /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+DEBUG util.py:421:  + cd murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic'
+DEBUG util.py:421:  + /usr/bin/python2 setup.py install -O1 --skip-build --root /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+DEBUG util.py:421:  running install
+DEBUG util.py:421:  [pbr] Generating AUTHORS
+DEBUG util.py:421:  [pbr] AUTHORS complete (0.0s)
+DEBUG util.py:421:  running install_lib
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/execution_plan_runner.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/exceptions.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/opts.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/execution_result.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/app.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common
+DEBUG util.py:421:  copying build/lib/muranoagent/common/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+DEBUG util.py:421:  copying build/lib/muranoagent/common/messaging/mqclient.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+DEBUG util.py:421:  copying build/lib/muranoagent/common/messaging/message.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+DEBUG util.py:421:  copying build/lib/muranoagent/common/messaging/subscription.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+DEBUG util.py:421:  copying build/lib/muranoagent/common/messaging/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging
+DEBUG util.py:421:  copying build/lib/muranoagent/common/config.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common
+DEBUG util.py:421:  copying build/lib/muranoagent/version.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/bunch.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/application
+DEBUG util.py:421:  copying build/lib/muranoagent/executors/application/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/application
+DEBUG util.py:421:  copying build/lib/muranoagent/executors/chef_puppet_executor_base.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef
+DEBUG util.py:421:  copying build/lib/muranoagent/executors/chef/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/puppet
+DEBUG util.py:421:  copying build/lib/muranoagent/executors/puppet/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/puppet
+DEBUG util.py:421:  copying build/lib/muranoagent/executors/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd
+DEBUG util.py:421:  copying build/lib/muranoagent/cmd/run.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd
+DEBUG util.py:421:  copying build/lib/muranoagent/cmd/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd
+DEBUG util.py:421:  copying build/lib/muranoagent/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/execution_plan_queue.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/win32.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  copying build/lib/muranoagent/files_manager.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/test_script_runner.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/test_files_manager.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/test_app.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  creating /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/executors/test_chef.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/executors/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/executors/test_puppet.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/base.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/execution_plan.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/unit/test_agent.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit
+DEBUG util.py:421:  copying build/lib/muranoagent/tests/__init__.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests
+DEBUG util.py:421:  copying build/lib/muranoagent/script_runner.py -> /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/execution_plan_runner.py to execution_plan_runner.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/exceptions.py to exceptions.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/opts.py to opts.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/execution_result.py to execution_result.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/app.py to app.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/mqclient.py to mqclient.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/message.py to message.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/subscription.py to subscription.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/messaging/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/common/config.py to config.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/version.py to version.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/bunch.py to bunch.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/application/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef_puppet_executor_base.py to chef_puppet_executor_base.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/chef/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/puppet/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/executors/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd/run.py to run.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/cmd/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/execution_plan_queue.py to execution_plan_queue.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/win32.py to win32.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/files_manager.py to files_manager.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_script_runner.py to test_script_runner.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_files_manager.py to test_files_manager.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_app.py to test_app.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors/test_chef.py to test_chef.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/executors/test_puppet.py to test_puppet.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/base.py to base.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/execution_plan.py to execution_plan.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/unit/test_agent.py to test_agent.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/tests/__init__.py to __init__.pyc
+DEBUG util.py:421:  byte-compiling /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/muranoagent/script_runner.py to script_runner.pyc
+DEBUG util.py:421:  writing byte-compilation script '/tmp/tmp1cZObA.py'
+DEBUG util.py:421:  /usr/bin/python2 -O /tmp/tmp1cZObA.py
+DEBUG util.py:421:  removing /tmp/tmp1cZObA.py
+DEBUG util.py:421:  running install_egg_info
+DEBUG util.py:421:  running egg_info
+DEBUG util.py:421:  writing murano_agent.egg-info/PKG-INFO
+DEBUG util.py:421:  writing top-level names to murano_agent.egg-info/top_level.txt
+DEBUG util.py:421:  writing dependency_links to murano_agent.egg-info/dependency_links.txt
+DEBUG util.py:421:  writing entry points to murano_agent.egg-info/entry_points.txt
+DEBUG util.py:421:  [pbr] Reusing existing SOURCES.txt
+DEBUG util.py:421:  Copying murano_agent.egg-info to /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages/murano_agent-3.0.0.0rc2-py2.7.egg-info
+DEBUG util.py:421:  running install_scripts
+DEBUG util.py:421:  Installing muranoagent script to /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/bin
+DEBUG util.py:421:  + install -p -D -m 644 etc/muranoagent/muranoagent.conf.sample /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/etc/murano-agent/muranoagent.conf
+DEBUG util.py:421:  + install -p -D -m 644 /builddir/build/SOURCES/murano-agent.service /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/systemd/system/murano-agent.service
+DEBUG util.py:421:  + install -p -D -m 644 /builddir/build/SOURCES/murano-agent.logrotate /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/etc/logrotate.d/murano-agent
+DEBUG util.py:421:  + install -d -m 755 /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/var/log/murano-agent
+DEBUG util.py:421:  + install -d -m 755 /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/var/lib/murano-agent
+DEBUG util.py:421:  + /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /builddir/build/BUILD/murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  /usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
+DEBUG util.py:421:  find: 'debug': No such file or directory
+DEBUG util.py:421:  + /usr/lib/rpm/check-buildroot
+DEBUG util.py:421:  + /usr/lib/rpm/redhat/brp-compress
+DEBUG util.py:421:  + /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
+DEBUG util.py:421:  + /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
+DEBUG util.py:421:  Bytecompiling .py files below /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7 using /usr/bin/python2.7
+DEBUG util.py:421:  + /usr/lib/rpm/redhat/brp-python-hardlink
+DEBUG util.py:421:  + /usr/lib/rpm/redhat/brp-java-repack-jars
+DEBUG util.py:421:  Executing(%check): /bin/sh -e /var/tmp/rpm-tmp.tXpxYF
+DEBUG util.py:421:  + umask 022
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + cd murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + export PYTHONPATH=/usr/lib64/python2.7/site-packages:/usr/lib/python2.7/site-packages:/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages
+DEBUG util.py:421:  + PYTHONPATH=/usr/lib64/python2.7/site-packages:/usr/lib/python2.7/site-packages:/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/lib/python2.7/site-packages
+DEBUG util.py:421:  + /usr/bin/python2 setup.py testr --coverage
+DEBUG util.py:421:  running testr
+DEBUG util.py:421:  Coverage.py warning: Module murano-agent was never imported.
+DEBUG util.py:421:  Coverage.py warning: No data was collected.
+DEBUG util.py:421:  Coverage.py warning: Module murano-agent was never imported.
+DEBUG util.py:421:  Coverage.py warning: No data was collected.
+DEBUG util.py:421:  Coverage.py warning: Module murano-agent was never imported.
+DEBUG util.py:421:  Coverage.py warning: No data was collected.
+DEBUG util.py:421:  utf-8
+DEBUG util.py:421:  Coverage.py warning: Module murano-agent was never imported.
+DEBUG util.py:421:  Coverage.py warning: No data was collected.
+DEBUG util.py:421:  Coverage.py warning: Module murano-agent was never imported.
+DEBUG util.py:421:  Coverage.py warning: No data was collected.
+DEBUG util.py:421:  No data to report.
+DEBUG util.py:421:  running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+DEBUG util.py:421:  OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+DEBUG util.py:421:  OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+DEBUG util.py:421:  ${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY --list 
+DEBUG util.py:421:  running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+DEBUG util.py:421:  OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+DEBUG util.py:421:  OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+DEBUG util.py:421:  ${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpFabyR4
+DEBUG util.py:421:  running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+DEBUG util.py:421:  OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+DEBUG util.py:421:  OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+DEBUG util.py:421:  ${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpPEAVfW
+DEBUG util.py:421:  running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+DEBUG util.py:421:  OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+DEBUG util.py:421:  OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+DEBUG util.py:421:  ${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpmWCWDY
+DEBUG util.py:421:  running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+DEBUG util.py:421:  OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+DEBUG util.py:421:  OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+DEBUG util.py:421:  ${PYTHON:-python} -m subunit.run discover $DISCOVER_DIRECTORY  --load-list /tmp/tmpg4U_s3
+DEBUG util.py:421:  Ran 37 tests in 0.122s
+DEBUG util.py:421:  PASSED (id=0)
+DEBUG util.py:421:  + exit 0
+DEBUG util.py:421:  Processing files: murano-agent-3.0.0-0.1.0rc2.el7.noarch
+DEBUG util.py:421:  Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.VYiiPY
+DEBUG util.py:421:  + umask 022
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + cd murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + DOCDIR=/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
+DEBUG util.py:421:  + export DOCDIR
+DEBUG util.py:421:  + /usr/bin/mkdir -p /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
+DEBUG util.py:421:  + cp -pr README.rst /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
+DEBUG util.py:421:  + cp -pr doc/build/html /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/doc/murano-agent-3.0.0
+DEBUG util.py:421:  + exit 0
+DEBUG util.py:421:  Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.45jfHh
+DEBUG util.py:421:  + umask 022
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + cd murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + LICENSEDIR=/builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/licenses/murano-agent-3.0.0
+DEBUG util.py:421:  + export LICENSEDIR
+DEBUG util.py:421:  + /usr/bin/mkdir -p /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/licenses/murano-agent-3.0.0
+DEBUG util.py:421:  + cp -pr LICENSE /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64/usr/share/licenses/murano-agent-3.0.0
+DEBUG util.py:421:  + exit 0
+DEBUG util.py:421:  Provides: config(murano-agent) = 3.0.0-0.1.0rc2.el7 murano-agent = 3.0.0-0.1.0rc2.el7
+DEBUG util.py:421:  Requires(interp): /bin/sh /bin/sh /bin/sh
+DEBUG util.py:421:  Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PartialHardlinkSets) <= 4.0.4-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+DEBUG util.py:421:  Requires(post): /bin/sh systemd
+DEBUG util.py:421:  Requires(preun): /bin/sh systemd
+DEBUG util.py:421:  Requires(postun): /bin/sh systemd
+DEBUG util.py:421:  Requires: /usr/bin/python2 python(abi) = 2.7
+DEBUG util.py:421:  Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+DEBUG util.py:421:  Wrote: /builddir/build/RPMS/murano-agent-3.0.0-0.1.0rc2.el7.noarch.rpm
+DEBUG util.py:421:  Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.Cpk0rY
+DEBUG util.py:421:  + umask 022
+DEBUG util.py:421:  + cd /builddir/build/BUILD
+DEBUG util.py:421:  + cd murano-agent-3.0.0.0rc2
+DEBUG util.py:421:  + /usr/bin/rm -rf /builddir/build/BUILDROOT/murano-agent-3.0.0-0.1.0rc2.el7.x86_64
+DEBUG util.py:421:  + exit 0
+DEBUG util.py:557:  Child return code was: 0
+DEBUG backend.py:442:  Copying packages to result dir
+DEBUG util.py:180:  kill orphans
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/centos-7-x86_64/root/var/cache/yum/'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
+DEBUG util.py:578:  child environment: None
+DEBUG util.py:502:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/centos-7-x86_64/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+DEBUG util.py:557:  Child return code was: 0
