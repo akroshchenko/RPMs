@@ -61,7 +61,8 @@ Requires(postun): systemd
 
 
 %description
-Murano Agent is the VM-side guest agent that accepts commands from Murano engine and executes them.
+Murano Agent is the VM-side guest agent that accepts commands from Murano
+engine and executes them.
 
 %prep
 %setup -q -n %{name}-%{upstream_version}
