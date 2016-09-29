@@ -91,10 +91,10 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 install -p -D -m 644 etc/muranoagent/muranoagent.conf.sample %{buildroot}%{_sysconfdir}/murano-agent/muranoagent.conf
 
 # Install initscript for services
-install -p -D -m 644 %{Source1} %{buildroot}%{_unitdir}/murano-agent.service
+install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/murano-agent.service
 
 # Install logrotate
-install -p -D -m 644 %{Source2} %{buildroot}%{_sysconfdir}/logrotate.d/murano-agent
+install -p -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/logrotate.d/murano-agent
 
 # Install log directory
 install -d -m 755 %{buildroot}%{_localstatedir}/log/murano-agent
