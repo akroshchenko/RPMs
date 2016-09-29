@@ -1,15 +1,15 @@
 %global milestone .0rc2
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
-Name:             murano-agent
+Name:             openstack-murano-agent
 Version:          3.0.0
 Release:          0.1%{?milestone}%{?dist}
 Summary:          VM-side guest agent that accepts commands from Murano engine and executes them.
 License:          ASL 2.0
 URL:              http://git.openstack.org/cgit/openstack/%{name}
 Source0:          https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
-Source1:          murano-agent.service
-Source2:          murano-agent.logrotate
+Source1:          openstack-murano-agent.service
+Source2:          openstack-murano-agent.logrotate
 
 BuildArch:        noarch
 
@@ -91,7 +91,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 install -p -D -m 644 etc/muranoagent/muranoagent.conf.sample %{buildroot}%{_sysconfdir}/murano-agent/muranoagent.conf
 
 # Install initscript for services
-install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/murano-agent.service
+install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/openstack-murano-agent.service
 
 # Install logrotate
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/logrotate.d/murano-agent
@@ -108,13 +108,13 @@ export PYTHONPATH="%{python2_sitearch}:%{python2_sitelib}:%{buildroot}%{python2_
 
 
 %post
-%systemd_post murano-agent
+%systemd_post openstack-murano-agent
 
 %preun
-%systemd_preun murano-agent
+%systemd_preun openstack-murano-agent
 
 %postun
-%systemd_postun_with_restart murano-agent
+%systemd_postun_with_restart openstack-murano-agent
 
 
 
@@ -126,7 +126,7 @@ export PYTHONPATH="%{python2_sitearch}:%{python2_sitelib}:%{buildroot}%{python2_
 %config(noreplace) %{_sysconfdir}/logrotate.d/murano-agent
 %config(noreplace) %{_sysconfdir}/murano-agent/muranoagent.conf
 %{_bindir}/muranoagent
-%{_unitdir}/murano-agent.service
+%{_unitdir}/openstack-murano-agent.service
 %dir %attr(0750, root, root) %{_localstatedir}/log/murano-agent
 %dir %{_sharedstatedir}/murano-agent
 %{python2_sitelib}/muranoagent
@@ -134,5 +134,5 @@ export PYTHONPATH="%{python2_sitearch}:%{python2_sitelib}:%{buildroot}%{python2_
 
 
 %changelog
-* Mon Sep 19 2016 Andrii Kroshchenko <akroshchenko@mirantis.com> - 3.0.0.0rc1
+* Mon Sep 19 2016 Andrii Kroshchenko <akroshchenko@mirantis.com> - 3.0.0.0rc2
 - Initial commit
