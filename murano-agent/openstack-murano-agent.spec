@@ -128,7 +128,7 @@ export PYTHONPATH="%{python2_sitearch}:%{python2_sitelib}:%{buildroot}%{python2_
 %config(noreplace) %{_sysconfdir}/murano-agent/muranoagent.conf
 %{_bindir}/muranoagent
 %{_unitdir}/openstack-murano-agent.service
-%dir %attr(0750, root, root) %{_localstatedir}/log/murano-agent
+%dir %{_localstatedir}/log/murano-agent
 %dir %{_sharedstatedir}/murano-agent
 %{python2_sitelib}/muranoagent
 %{python2_sitelib}/murano_agent-*.egg-info
