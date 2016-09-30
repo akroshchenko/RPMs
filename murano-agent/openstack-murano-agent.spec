@@ -63,7 +63,7 @@ Requires(postun): systemd
 
 %description
 Murano Agent is the VM-side guest agent that accepts commands from Murano
-engine and executes them.
+engine and executes them
 
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
